@@ -1,4 +1,4 @@
-# gisse_app
+# giesse_app
 
 A new Flutter project.
 

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gisse_app">
+    package="com.example.giesse_app">
    <application
-        android:label="gisse_app"
+        android:label="giesse_app"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
