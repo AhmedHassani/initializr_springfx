@@ -3,6 +3,9 @@
 A new Flutter project.
 
 ## Getting Started
+This is the architecture plan for the Giesse flutter app.
+
+![alt text](https://user-images.githubusercontent.com/8302647/100940860-61fad500-3501-11eb-82a2-bbd6d9784646.jpg)
 
 This project is a starting point for a Flutter application.
 
