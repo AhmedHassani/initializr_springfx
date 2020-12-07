@@ -1,8 +1,17 @@
+import 'package:floating_search_bar/floating_search_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:giesse_app/presentation/Screens/homeScreen2.dart';
 
-import 'presentation/home.dart';
+import 'presentation/Screens/homeScreen.dart';
 
 void main() {
+  // SystemChrome.setSystemUIOverlayStyle(
+  //   const SystemUiOverlayStyle(
+  //     systemNavigationBarColor: Colors.white,
+  //   ),
+  // );
+
   runApp(MyApp());
 }
 
@@ -16,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: HomeScreen2(),
     );
   }
 }

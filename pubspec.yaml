@@ -25,9 +25,11 @@ dependencies:
     sdk: flutter
   bloc: ^6.1.0
   cupertino_icons: ^1.0.0
+  floating_search_bar: ^0.3.0
   flutter_bloc: ^6.1.1
   get_it: ^5.0.1
-  material_floating_search_bar: ^0.2.3
+  material_floating_search_bar: ^0.2.4
+  material_search_bar: ^1.0.0
 
 dev_dependencies:
   flutter_test:
