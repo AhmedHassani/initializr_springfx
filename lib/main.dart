@@ -1,9 +1,6 @@
-import 'package:floating_search_bar/floating_search_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:giesse_app/presentation/Screens/homeScreen2.dart';
-
-import 'presentation/Screens/homeScreen.dart';
+import 'package:giesse_app/presentation/utils/uiResponsive.dart';
+import 'package:giesse_app/presentation/Screens/signInScreen.dart';
 
 void main() {
   // SystemChrome.setSystemUIOverlayStyle(
@@ -19,13 +16,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Giesse App',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomeScreen2(),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return OrientationBuilder(
+          builder: (context, orientation) {
+            SizeConfig().init(constraints, orientation);
+            return MaterialApp(
+              title: 'Giesse App',
+              debugShowCheckedModeBanner: false,
+              theme: ThemeData(
+                primarySwatch: Colors.blue,
+              ),
+              home: SignInScreen(),
+            );
+          },
+        );
+      },
     );
   }
 }
