@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:giesse_app/presentation/utils/widgets.dart';
+import 'package:giesse_app/presentation/Widgets/text.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

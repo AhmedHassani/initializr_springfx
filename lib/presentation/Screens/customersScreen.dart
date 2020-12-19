@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:giesse_app/presentation/utils/uiResponsive.dart';
+import 'package:giesse_app/presentation/Widgets/FloatingButton.dart';
+import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/Widgets/userCard.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
@@ -21,19 +22,7 @@ class _HomeScreenState extends State<CustomersScreen> {
       drawer: Drawer(
         child: NavigationDrawer(),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
-        label: Row(
-          children: [
-            Text('Order'),
-            Icon(
-              Icons.shopping_cart,
-            ),
-          ],
-        ),
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(16.0))),
-      ),
+      floatingActionButton: FloatingButton(),
       resizeToAvoidBottomInset: false,
       body: Builder(
         builder: (context) => Stack(

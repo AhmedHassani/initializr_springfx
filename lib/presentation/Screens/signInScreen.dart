@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:giesse_app/presentation/utils/uiResponsive.dart';
-import 'package:giesse_app/presentation/utils/widgets.dart';
+import 'package:giesse_app/presentation/Widgets/textField.dart';
+import 'package:giesse_app/presentation/utils/responsiveUI.dart';
+import 'package:giesse_app/presentation/Widgets/text.dart';
 
 class SignInScreen extends StatefulWidget {
   static String tag = '/T5SignIn';

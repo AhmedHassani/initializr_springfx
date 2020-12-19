@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:giesse_app/infrastructure/models/drawerItem.dart';
-import 'package:giesse_app/presentation/utils/widgets.dart';
+import 'package:giesse_app/presentation/Widgets/text.dart';
 
 class NavigationDrawer extends StatefulWidget {
   @override

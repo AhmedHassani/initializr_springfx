@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:giesse_app/presentation/Widgets/text.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
-import 'package:giesse_app/presentation/utils/widgets.dart';
 
 class UserCard extends StatelessWidget {
   const UserCard({

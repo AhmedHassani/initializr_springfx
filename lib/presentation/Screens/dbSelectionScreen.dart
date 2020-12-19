@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:giesse_app/infrastructure/dummyData/databases.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
-import 'package:giesse_app/presentation/utils/widgets.dart';
-import '../utils/uiResponsive.dart';
+import 'package:giesse_app/presentation/Widgets/text.dart';
+import '../utils/responsiveUI.dart';
 
 class DatabaseSelection extends StatelessWidget {
   const DatabaseSelection({Key key}) : super(key: key);

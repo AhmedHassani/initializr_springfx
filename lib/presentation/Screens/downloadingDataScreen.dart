@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:giesse_app/presentation/utils/uiResponsive.dart';
+import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
-import 'package:giesse_app/presentation/utils/widgets.dart';
+import 'package:giesse_app/presentation/Widgets/text.dart';
 import 'package:giesse_app/presentation/Widgets/downloadProgressIndicator.dart';
 
 class DownloadingDataScreen extends StatelessWidget {

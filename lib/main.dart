@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:giesse_app/presentation/utils/uiResponsive.dart';
+import 'package:giesse_app/presentation/Screens/userScreen.dart';
+import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/signInScreen.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 primarySwatch: Colors.blue,
               ),
-              home: SignInScreen(),
+              home: UserScreen(),
             );
           },
         );

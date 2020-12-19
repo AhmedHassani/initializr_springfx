@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:giesse_app/presentation/Screens/signInScreen.dart';
-
 import 'package:giesse_app/presentation/utils/colors.dart';
-import 'package:giesse_app/presentation/utils/widgets.dart';
+import 'package:giesse_app/presentation/Widgets/text.dart';
 
 class T5Dialog extends StatefulWidget {
   static var tag = "/T5Dialog";
