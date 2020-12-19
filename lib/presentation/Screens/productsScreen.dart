@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:giesse_app/presentation/Widgets/FloatingButton.dart';
+import 'package:giesse_app/presentation/Widgets/productCard.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
-import 'package:giesse_app/presentation/Widgets/userCard.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
-class CustomersScreen extends StatefulWidget {
-  CustomersScreen({Key key}) : super(key: key);
+class ProductsScreen extends StatefulWidget {
+  ProductsScreen({Key key}) : super(key: key);
 
   @override
-  _CustomersScreenState createState() => _CustomersScreenState();
+  _ProductsScreenState createState() => _ProductsScreenState();
 }
 
-class _CustomersScreenState extends State<CustomersScreen> {
+class _ProductsScreenState extends State<ProductsScreen> {
   @override
   Widget build(BuildContext context) {
     final isPortrait =
@@ -47,7 +47,7 @@ class _CustomersScreenState extends State<CustomersScreen> {
       height: SizeConfig.screenHeight - 100,
       child: ListView.builder(
         itemCount: 42,
-        itemBuilder: (_, index) => UserCard(),
+        itemBuilder: (_, index) => ProductCard(),
       ),
     );
   }
