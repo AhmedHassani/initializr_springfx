@@ -6,8 +6,6 @@ import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
 class SignInScreen extends StatefulWidget {
-  static String tag = '/T5SignIn';
-
   @override
   SignInScreenState createState() => SignInScreenState();
 }
@@ -65,7 +63,8 @@ class SignInScreenState extends State<SignInScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: FlatButton(
-                        onPressed: () => print('Pressed'),
+                        onPressed: () => Navigator.of(context)
+                            .pushReplacementNamed('/DatabaseSelection'),
                         child: Padding(
                           padding: const EdgeInsets.all(13.0),
                           child: text(

@@ -22,7 +22,7 @@ class InsertOrderScreen extends StatelessWidget {
           'Insert Order',
           fontSize: 18.0,
           isPrimary: false,
-          textColor: t4_textColorSecondary,
+          textColor: textColorSecondary,
         ),
       ),
       body: SingleChildScrollView(

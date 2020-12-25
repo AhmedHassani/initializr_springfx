@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/infrastructure/models/drawerItem.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
@@ -13,23 +15,26 @@ class NavigationDrawerState extends State<NavigationDrawer> {
   int _selectedIndex = 0;
 
   final drawerItemsCategory1 = [
-    DrawerItem(name: "Customers", iconPath: 'assets/icons/user.png'),
-    DrawerItem(name: "Map", iconPath: 'assets/icons/map.png'),
-    DrawerItem(name: "Order History", iconPath: 'assets/icons/tag.png'),
-    DrawerItem(name: "Cart", iconPath: 'assets/icons/cart.png'),
-    DrawerItem(name: "Taking", iconPath: 'assets/icons/box.png'),
-    DrawerItem(name: "Agents", iconPath: 'assets/icons/agents.png'),
-    DrawerItem(name: "Suppliers", iconPath: 'assets/icons/users.png'),
+    DrawerItem(name: "Customers", iconPath: Assets.icons.menu.customers.path),
+    DrawerItem(name: "Map", iconPath: Assets.icons.menu.map.path),
     DrawerItem(
-        name: "Agent Statistics", iconPath: 'assets/icons/pie-chart.png'),
+        name: "Order History", iconPath: Assets.icons.menu.orderHistory.path),
+    DrawerItem(name: "Cart", iconPath: Assets.icons.menu.products.path),
+    DrawerItem(name: "Taking", iconPath: Assets.icons.menu.takings.path),
+    DrawerItem(name: "Agents", iconPath: Assets.icons.menu.agents.path),
+    DrawerItem(name: "Suppliers", iconPath: Assets.icons.menu.suppliers.path),
+    DrawerItem(
+        name: "Agent Statistics",
+        iconPath: Assets.icons.menu.agentsStatistics.path),
   ];
   final drawerItemsCategory2 = [
-    DrawerItem(name: "Catalogue", iconPath: 'assets/icons/image.png'),
-    DrawerItem(name: "Remote Files", iconPath: 'assets/icons/speaker.png'),
-    DrawerItem(name: "CRM", iconPath: 'assets/icons/compass.png'),
+    DrawerItem(name: "Catalogue", iconPath: Assets.icons.menu.catalog.path),
+    DrawerItem(
+        name: "Remote Files", iconPath: Assets.icons.menu.remoteFiles.path),
+    DrawerItem(name: "CRM", iconPath: Assets.icons.menu.crm.path),
   ];
   final drawerItemsCategory3 = [
-    DrawerItem(name: "About", iconPath: 'assets/icons/about.png'),
+    DrawerItem(name: "About", iconPath: Assets.icons.menu.about.path),
   ];
   // _getDrawerItemScreen(int pos) {
   //   return HomeScreen();
@@ -92,9 +97,11 @@ class NavigationDrawerState extends State<NavigationDrawer> {
 
   ListTile buildListTile(DrawerItem d, int i) {
     return ListTile(
-      leading: Image.asset(
+      leading: SvgPicture.asset(
         d.iconPath,
         color: Colors.grey,
+        width: 24,
+        height: 24,
       ),
       title: text(
         d.name,

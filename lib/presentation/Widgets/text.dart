@@ -20,7 +20,7 @@ Widget text(
       style: TextStyle(
         fontFamily: 'Lato',
         fontSize: fontSize,
-        color: isPrimary ? t4_textColorPrimary : textColor,
+        color: isPrimary ? textColorPrimary : textColor,
         fontWeight: isBold ? FontWeight.w900 : FontWeight.normal,
         fontStyle: FontStyle.normal,
         height: 1.5,

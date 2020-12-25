@@ -22,7 +22,7 @@ class DownloadingDataScreen extends StatelessWidget {
           'Downloading Data',
           fontSize: 18.0,
           isPrimary: false,
-          textColor: t4_textColorSecondary,
+          textColor: textColorSecondary,
         ),
       ),
       body: Padding(
@@ -32,52 +32,57 @@ class DownloadingDataScreen extends StatelessWidget {
           top: padding,
           bottom: padding,
         ),
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: [
-              BoxShadow(
-                color: Color.fromRGBO(214, 214, 214, 0.25),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: Offset(0, 4), // changes position of shadow
-              ),
-            ],
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 30, bottom: 40),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10),
-                      child: Image.asset(
-                        'assets/images/DatabaseIcon.png',
-                        height: 23,
-                        width: 23,
-                      ),
-                    ),
-                    text(
-                      'Database 1',
-                      fontSize: 16.0,
-                    ),
-                  ],
+        //TODO remove GestureDetector
+        child: GestureDetector(
+          onTap: () =>
+              Navigator.of(context).pushReplacementNamed('/CustomersScreen'),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(
+                  color: Color.fromRGBO(214, 214, 214, 0.25),
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                  offset: Offset(0, 4), // changes position of shadow
                 ),
-              ),
-              DownloadProgressIndicator(),
-              Padding(
-                padding: const EdgeInsets.only(top: 40, bottom: 38),
-                child: text('Downloading Database',
-                    fontSize: 16.0,
-                    textColor: t4_textColorSecondary,
-                    isPrimary: false),
-              )
-            ],
+              ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 30, bottom: 40),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: Image.asset(
+                          'assets/images/DatabaseIcon.png',
+                          height: 23,
+                          width: 23,
+                        ),
+                      ),
+                      text(
+                        'Database 1',
+                        fontSize: 16.0,
+                      ),
+                    ],
+                  ),
+                ),
+                DownloadProgressIndicator(),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40, bottom: 38),
+                  child: text('Downloading Database',
+                      fontSize: 16.0,
+                      textColor: textColorSecondary,
+                      isPrimary: false),
+                )
+              ],
+            ),
           ),
         ),
       ),

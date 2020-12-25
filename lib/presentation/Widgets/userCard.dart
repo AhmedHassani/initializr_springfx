@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 
@@ -10,84 +12,64 @@ class UserCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 15, 20, 0),
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            BoxShadow(
-              color: Color.fromRGBO(214, 214, 214, 0.25),
-              spreadRadius: 5,
-              blurRadius: 7,
-              offset: Offset(0, 4), // changes position of shadow
+      padding: const EdgeInsets.only(
+        bottom: 15,
+        left: 20,
+        right: 20,
+      ),
+      child: Column(
+        children: [
+          ListTile(
+            leading: ClipRRect(
+              child: SvgPicture.asset(
+                Assets.icons.userAvater.path,
+                // width: MediaQuery.of(context).size.width / 4.5,
+                // height: MediaQuery.of(context).size.width / 4.7,
+                fit: BoxFit.fill,
+              ),
+              borderRadius: BorderRadius.circular(10),
             ),
-          ],
-        ),
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 15, 20, 0),
-          child: Column(
-            children: <Widget>[
-              Row(
+            title: Padding(
+              padding: const EdgeInsets.only(left: 10.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  ClipRRect(
-                    child: Image.asset(
-                      'assets/images/avatar.png',
-                      width: MediaQuery.of(context).size.width / 4.5,
-                      height: MediaQuery.of(context).size.width / 4.7,
-                      fit: BoxFit.fill,
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
                   Expanded(
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  text(
-                                    'John Doe',
-                                    textColor: t4_textColorPrimary,
-                                    fontSize: 18.0,
-                                    isBold: true,
-                                  ),
-                                  Checkbox(
-                                    value: false,
-                                    // onChanged: _handleRadioValueChange1,
-                                  ),
-                                ],
-                              ),
-                              text('this is the info ',
-                                  fontSize: 15.0,
-                                  textColor: t4_textColorPrimary),
-                              SizedBox(
-                                height: 4,
-                              ),
-                              text('Address', fontSize: 15.0, maxLine: 3),
-                              SizedBox(
-                                height: 4,
-                              ),
-                            ],
-                          ),
-                        )
+                      children: [
+                        text(
+                          'User Name',
+                          textColor: textColorPrimary,
+                          fontSize: 18.0,
+                          isBold: true,
+                        ),
+                        text(
+                          'neighborhood, City, State, Country. Street, House ',
+                          fontSize: 12.0,
+                          textColor: textColorPrimary,
+                          isPrimary: false,
+                          maxLine: 2,
+                          isLongText: true,
+                        ),
                       ],
                     ),
                   ),
+                  SvgPicture.asset(
+                    Assets.icons.sharedIcons.selectedCustomer.path,
+                    width: 40,
+                    height: 40,
+                    //TODO to make logic for changing color
+                    // color: ,
+                  )
                 ],
               ),
-              SizedBox(
-                height: 16,
-              ),
-            ],
+            ),
           ),
-        ),
+          Divider(),
+        ],
       ),
     );
   }

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:giesse_app/presentation/Widgets/FloatingButton.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:giesse_app/gen/assets.gen.dart';
+import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
+import 'package:giesse_app/presentation/Widgets/searchBar.dart';
+import 'package:giesse_app/presentation/utils/listOfActionsSearchBar.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/Widgets/userCard.dart';
@@ -15,14 +19,18 @@ class CustomersScreen extends StatefulWidget {
 class _CustomersScreenState extends State<CustomersScreen> {
   @override
   Widget build(BuildContext context) {
-    final isPortrait =
-        MediaQuery.of(context).orientation == Orientation.portrait;
-
+    Function onPressed =
+        () => Navigator.of(context).pushReplacementNamed('/ProductsScreen');
     return Scaffold(
       drawer: Drawer(
         child: NavigationDrawer(),
       ),
-      floatingActionButton: FloatingButton(),
+      floatingActionButton: buildFloatingButton(
+        context,
+        Assets.icons.sharedIcons.addToCart.path,
+        'Order',
+        onPressed,
+      ),
       resizeToAvoidBottomInset: false,
       body: Builder(
         builder: (context) => Stack(
@@ -32,8 +40,10 @@ class _CustomersScreenState extends State<CustomersScreen> {
               top: 80,
               child: buildUsersListView(),
             ),
-            Positioned(
-              child: buildFloatingSearchBar(context, isPortrait),
+            buildFloatingSearchBar(
+              context,
+              SizeConfig.isPortrait,
+              actionsCustomersScreen,
             ),
           ],
         ),
@@ -49,73 +59,6 @@ class _CustomersScreenState extends State<CustomersScreen> {
         itemCount: 42,
         itemBuilder: (_, index) => UserCard(),
       ),
-    );
-  }
-
-  FloatingSearchBar buildFloatingSearchBar(
-      BuildContext context, bool isPortrait) {
-    return FloatingSearchBar(
-      borderRadius: BorderRadius.circular(10),
-      padding: EdgeInsets.fromLTRB(5, 2, 0, 2),
-
-      leadingActions: [
-        FloatingSearchBarAction(
-          showIfOpened: false,
-          child: CircularButton(
-            icon: const Icon(
-              Icons.menu_rounded,
-              color: Colors.black,
-            ),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
-          ),
-        ),
-      ],
-      hint: 'Search...',
-      scrollPadding: const EdgeInsets.only(top: 16, bottom: 56),
-      transitionDuration: const Duration(milliseconds: 500),
-      transitionCurve: Curves.easeInOut,
-      physics: const BouncingScrollPhysics(),
-      axisAlignment: isPortrait ? 0.0 : -1.0,
-      openAxisAlignment: 0.0,
-      maxWidth: isPortrait ? 600 : 500,
-      debounceDelay: const Duration(milliseconds: 100),
-      onQueryChanged: (query) {
-        // Call your model, bloc, controller here.
-      },
-      // Specify a custom transition to be used for
-      // animating between opened and closed stated.
-      transition: CircularFloatingSearchBarTransition(),
-      automaticallyImplyDrawerHamburger: false,
-      actions: [
-        FloatingSearchBarAction(
-          showIfOpened: false,
-          child: CircularButton(
-            icon: const Icon(
-              Icons.filter_list_alt,
-              color: Colors.black,
-            ),
-            onPressed: () {},
-          ),
-        ),
-        FloatingSearchBarAction(
-          showIfOpened: false,
-          child: CircularButton(
-            icon: const Icon(
-              Icons.account_box,
-              color: Colors.blue,
-            ),
-            onPressed: () {},
-          ),
-        ),
-        FloatingSearchBarAction.searchToClear(
-          showIfClosed: false,
-        ),
-      ],
-      builder: (context, transition) {
-        return Container();
-      },
     );
   }
 }

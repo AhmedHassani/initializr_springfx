@@ -55,7 +55,7 @@ class ProductCard extends StatelessWidget {
                                 children: [
                                   text(
                                     'Product Name',
-                                    textColor: t4_textColorPrimary,
+                                    textColor: textColorPrimary,
                                     fontSize: 18.0,
                                     isBold: true,
                                   ),
@@ -64,7 +64,7 @@ class ProductCard extends StatelessWidget {
                               text(
                                 '#CCC174',
                                 fontSize: 12.0,
-                                textColor: t4_textColorSecondary,
+                                textColor: textColorSecondary,
                                 isPrimary: false,
                               ),
                               SizedBox(
@@ -76,7 +76,7 @@ D: 120,000 KG''',
                                 fontSize: 15.0,
                                 maxLine: 2,
                                 isPrimary: false,
-                                textColor: t4_textColorSecondary,
+                                textColor: textColorSecondary,
                               ),
                               SizedBox(
                                 height: 4,

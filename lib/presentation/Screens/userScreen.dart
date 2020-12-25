@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:giesse_app/presentation/Widgets/FloatingButton.dart';
+import 'package:giesse_app/gen/assets.gen.dart';
+import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
@@ -43,10 +44,12 @@ class _UserScreenState extends State<UserScreen>
 
   @override
   Widget build(BuildContext context) {
-    double padding = (17.6 / 100) * SizeConfig.screenHeight;
+    Function onPressed =
+        () => Navigator.of(context).pushNamed('/InsertOrderScreen');
     return Scaffold(
       drawer: NavigationDrawer(),
-      floatingActionButton: FloatingButton(),
+      floatingActionButton: buildFloatingButton(
+          context, Assets.icons.sharedIcons.addToCart.path, 'Order', onPressed),
       appBar: AppBar(
         bottom: TabBar(
           // automaticIndicatorColorAdjustment: true,
@@ -69,7 +72,7 @@ class _UserScreenState extends State<UserScreen>
           'User Name',
           fontSize: 18.0,
           isPrimary: false,
-          textColor: t4_textColorSecondary,
+          textColor: textColorSecondary,
         ),
       ),
       body: TabBarView(

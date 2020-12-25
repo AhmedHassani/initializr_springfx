@@ -66,7 +66,7 @@ class DatabaseSelection extends StatelessWidget {
                           fontSize: 12.0,
                           maxLine: 2,
                           isPrimary: false,
-                          textColor: t4_textColorSecondary,
+                          textColor: textColorSecondary,
                         ),
                       ),
                     ),
@@ -156,7 +156,8 @@ class DatabaseSelection extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: FlatButton(
-                  onPressed: () => print('Pressed'),
+                  onPressed: () => Navigator.of(context)
+                      .pushReplacementNamed('/DownloadingDataScreen'),
                   child: Padding(
                     padding: const EdgeInsets.all(13.0),
                     child: text(
