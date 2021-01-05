@@ -5,14 +5,12 @@ import 'package:giesse_app/presentation/Screens/signInScreen.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
-class T5Dialog extends StatefulWidget {
-  static var tag = "/T5Dialog";
-
+class UserSettingsDialog extends StatefulWidget {
   @override
-  T5DialogState createState() => T5DialogState();
+  UserSettingsDialogState createState() => UserSettingsDialogState();
 }
 
-class T5DialogState extends State<T5Dialog> {
+class UserSettingsDialogState extends State<UserSettingsDialog> {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 1000), () {

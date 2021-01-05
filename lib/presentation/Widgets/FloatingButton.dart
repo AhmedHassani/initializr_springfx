@@ -14,7 +14,7 @@ Widget buildFloatingButton(
     splashColor: Colors.transparent,
     highlightColor: Colors.transparent,
     child: Container(
-      width: 123,
+      width: 145,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: iconColor,

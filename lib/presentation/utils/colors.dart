@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 const mainBlueColor = Color.fromRGBO(55, 224, 203, 1);
-
+const secondBlueColor = Color.fromRGBO(223, 255, 251, 1);
 const colorPrimary = Color(0XFF4600D9);
 const colorPrimaryDark = Color(0XFF4600D9);
 const colorAccent = Color(0XFF4600D9);
-
+const expiredRedColor = Color.fromRGBO(254, 58, 59, 1);
 const iconColor = Color.fromRGBO(55, 224, 203, 1);
 
 const textColorPrimary = Color.fromRGBO(47, 62, 72, 1);
