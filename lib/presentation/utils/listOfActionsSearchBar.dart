@@ -139,3 +139,52 @@ List<Widget> actionsTakingScreen = [
     showIfClosed: false,
   ),
 ];
+List<Widget> orderHistoryScreen = [
+  FloatingSearchBarAction(
+    showIfOpened: false,
+    child: CircularButton(
+      icon: SvgPicture.asset(
+        Assets.icons.sharedIcons.filter.path,
+        width: 20,
+        height: 20,
+      ),
+      onPressed: () {},
+    ),
+  ),
+  FloatingSearchBarAction(
+    showIfOpened: false,
+    child: CircularButton(
+      icon: SvgPicture.asset(
+        Assets.icons.sharedIcons.sort.path,
+        width: 20,
+        height: 20,
+      ),
+      onPressed: () {},
+    ),
+  ),
+  FloatingSearchBarAction(
+    showIfOpened: false,
+    child: CircularButton(
+      icon: SvgPicture.asset(
+        Assets.icons.sharedIcons.increment.path,
+        width: 20,
+        height: 20,
+      ),
+      onPressed: () {},
+    ),
+  ),
+  FloatingSearchBarAction(
+    showIfOpened: false,
+    child: CircularButton(
+      icon: SvgPicture.asset(
+        Assets.icons.sharedIcons.user.path,
+        width: 30,
+        height: 30,
+      ),
+      onPressed: () {},
+    ),
+  ),
+  FloatingSearchBarAction.searchToClear(
+    showIfClosed: false,
+  ),
+];

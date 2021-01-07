@@ -1,20 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 91 91" style="enable-background:new 0 0 91 91;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;}
-</style>
-<g>
-	<polyline class="st0" points="80.4,41.8 80.4,86.9 8.6,86.9 8.6,4.1 53.9,4.1 	"/>
-	<g id="Page-1">
-		<g id="Core" transform="translate(-213.000000, -129.000000)">
-			<g id="create" transform="translate(213.000000, 129.000000)">
-				<path id="Shape" class="st1" d="M19.7,57.1v14.2h14.2l41.2-41.5L60.8,15.6L19.7,57.1L19.7,57.1z M85.9,19c1.5-1.5,1.5-3.7,0-5.2
-					l-8.6-8.6c-1.5-1.5-3.7-1.5-5.2,0l-6.7,6.7l14.2,14.2L85.9,19L85.9,19z"/>
-			</g>
-		</g>
-	</g>
-</g>
+<svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 9.19565V19H1V1H11.0947" stroke="#B1B8CA" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.79346 12.5237V15.6097H6.87949L15.8333 6.59071L12.7256 3.50468L3.79346 12.5237ZM18.1804 4.24359C18.5064 3.9176 18.5064 3.43948 18.1804 3.11349L16.3114 1.24449C15.9854 0.918503 15.5073 0.918503 15.1813 1.24449L13.7253 2.70058L16.8113 5.7866L18.1804 4.24359Z" fill="#B1B8CA"/>
 </svg>

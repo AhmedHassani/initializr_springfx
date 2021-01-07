@@ -34,25 +34,34 @@ class _CartScreenState extends State<CartScreen> {
         builder: (context) => Stack(
           fit: StackFit.expand,
           children: [
-            Positioned(
-              top: 80,
-              child: buildUsersListView(),
-            ),
             buildFloatingSearchBar(
               context,
               SizeConfig.isPortrait,
               actionsCustomersScreen,
             ),
-            TabBar(
-              // automaticIndicatorColorAdjustment: true,
-              indicatorSize: TabBarIndicatorSize.label,
-              labelColor: Color.fromRGBO(94, 136, 254, 1),
-              unselectedLabelColor: Colors.grey,
-              controller: _controller,
-              tabs: [
-                Tab(text: 'Open'),
-                Tab(text: 'Closed'),
-              ],
+            Positioned(
+              top: 135,
+              child: buildUsersListView(),
+            ),
+            Positioned(
+              top: 100,
+              left: 25,
+              child: Wrap(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Chip(
+                      label: Text('Open'),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Chip(
+                      label: Text('Closed'),
+                    ),
+                  )
+                ],
+              ),
             ),
           ],
         ),
