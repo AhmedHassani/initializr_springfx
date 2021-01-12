@@ -5,8 +5,8 @@ import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 
-class CartOrdersCard extends StatelessWidget {
-  const CartOrdersCard({
+class OrderHistoryCard extends StatelessWidget {
+  const OrderHistoryCard({
     Key key,
   }) : super(key: key);
 
@@ -66,7 +66,7 @@ class CartOrdersCard extends StatelessWidget {
                       ],
                     ),
                     text(
-                      '#123456',
+                      '25/12/2020',
                       isPrimary: false,
                       textColor: textColorSecondary,
                       fontSize: 16.0,
@@ -74,25 +74,66 @@ class CartOrdersCard extends StatelessWidget {
                     SizedBox(
                       height: 15,
                     ),
+                    Row(
+                      children: [
+                        text(
+                          'Cod: 1234',
+                          fontSize: 16.0,
+                        ),
+                        SizedBox(
+                          width: 38,
+                        ),
+                        text(
+                          'kg: 15,00',
+                          fontSize: 16.0,
+                        ),
+                        SizedBox(
+                          width: 37,
+                        ),
+                        text(
+                          'kg: 10,00',
+                          fontSize: 16.0,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 20),
+                              child: SvgPicture.asset(
+                                Assets.icons.sharedIcons.minus.path,
+                                color: textColorSecondary,
+                                width: 24,
+                                height: 24,
+                              ),
+                            ),
+                            SvgPicture.asset(
+                              Assets.icons.sharedIcons.plus.path,
+                              color: textColorSecondary,
+                              width: 24,
+                              height: 24,
+                            ),
+                          ],
+                        ),
+                        SvgPicture.asset(
+                          Assets.icons.sharedIcons.editOrder.path,
+                          color: mainGreenColor,
+                          width: 24,
+                          height: 24,
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 24,
+                    )
                   ],
                 ),
-              ),
-              Column(
-                children: [
-                  IconButton(
-                    icon: Icon(
-                      Icons.arrow_forward_ios,
-                      color: textColorSecondary,
-                    ),
-                    onPressed: () => print('Pressed'),
-                  ),
-                  text(
-                    '€20.00',
-                    isPrimary: false,
-                    textColor: mainGreenColor,
-                    fontSize: 16.0,
-                  ),
-                ],
               ),
             ],
           ),

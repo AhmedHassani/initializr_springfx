@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/infrastructure/models/drawerItem.dart';
+import 'package:giesse_app/presentation/Screens/customersScreen.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
 class NavigationDrawer extends StatefulWidget {
@@ -15,43 +16,75 @@ class NavigationDrawerState extends State<NavigationDrawer> {
   int _selectedIndex = 0;
 
   final drawerItemsCategory1 = [
-    DrawerItem(name: "Customers", iconPath: Assets.icons.menu.customers.path),
-    DrawerItem(name: "Map", iconPath: Assets.icons.menu.map.path),
     DrawerItem(
-        name: "Order History", iconPath: Assets.icons.menu.orderHistory.path),
-    DrawerItem(name: "Cart", iconPath: Assets.icons.menu.products.path),
-    DrawerItem(name: "Taking", iconPath: Assets.icons.menu.takings.path),
-    DrawerItem(name: "Agents", iconPath: Assets.icons.menu.agents.path),
-    DrawerItem(name: "Suppliers", iconPath: Assets.icons.menu.suppliers.path),
+        name: "Customers",
+        iconPath: Assets.icons.menu.customers.path,
+        navigate: '/CustomersScreen'),
+    DrawerItem(
+        name: "Map",
+        iconPath: Assets.icons.menu.map.path,
+        navigate: '/CustomersScreen'),
+    DrawerItem(
+        name: "Order History",
+        iconPath: Assets.icons.menu.orderHistory.path,
+        navigate: '/OrderHistoryScreen'),
+    DrawerItem(
+        name: "Cart",
+        iconPath: Assets.icons.menu.products.path,
+        navigate: '/CartScreen'),
+    DrawerItem(
+        name: "Taking",
+        iconPath: Assets.icons.menu.takings.path,
+        navigate: '/TakingScreen'),
+    DrawerItem(
+        name: "Agents",
+        iconPath: Assets.icons.menu.agents.path,
+        navigate: '/CustomersScreen'),
+    DrawerItem(
+        name: "Suppliers",
+        iconPath: Assets.icons.menu.suppliers.path,
+        navigate: '/SuppliersScreen'),
     DrawerItem(
         name: "Agent Statistics",
-        iconPath: Assets.icons.menu.agentsStatistics.path),
+        iconPath: Assets.icons.menu.agentsStatistics.path,
+        navigate: '/CustomersScreen'),
   ];
   final drawerItemsCategory2 = [
-    DrawerItem(name: "Catalogue", iconPath: Assets.icons.menu.catalog.path),
     DrawerItem(
-        name: "Remote Files", iconPath: Assets.icons.menu.remoteFiles.path),
-    DrawerItem(name: "CRM", iconPath: Assets.icons.menu.crm.path),
+        name: "Catalogue",
+        iconPath: Assets.icons.menu.catalog.path,
+        navigate: '/CatalogScreen'),
+    DrawerItem(
+        name: "Remote Files",
+        iconPath: Assets.icons.menu.remoteFiles.path,
+        navigate: '/CatalogScreen'),
+    DrawerItem(
+        name: "CRM",
+        iconPath: Assets.icons.menu.crm.path,
+        navigate: '/CustomersScreen'),
   ];
   final drawerItemsCategory3 = [
-    DrawerItem(name: "About", iconPath: Assets.icons.menu.about.path),
+    DrawerItem(
+        name: "About",
+        iconPath: Assets.icons.menu.about.path,
+        navigate: '/CustomersScreen'),
   ];
-  // _getDrawerItemScreen(int pos) {
-  //   return HomeScreen();
-  // }
+  _getDrawerItemScreen(int pos) {
+    return CustomersScreen();
+  }
 
   _onSelectItem(int index) {
     setState(() {
       _selectedIndex = index;
-      // _getDrawerItemScreen(_selectedIndex);
+      _getDrawerItemScreen(_selectedIndex);
     });
     Navigator.of(context).pop(); // close the drawer
-    //  Navigator.push(
-    //    context,
-    //      MaterialPageRoute(
-    //      builder: (context) => _getDrawerItemScreen(_selectedIndex),
-    //    ),
-    //  );
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => _getDrawerItemScreen(_selectedIndex),
+      ),
+    );
   }
 
   @override
@@ -111,7 +144,7 @@ class NavigationDrawerState extends State<NavigationDrawer> {
       contentPadding: EdgeInsets.only(left: 25),
       focusColor: Colors.red,
       horizontalTitleGap: 15.0,
-      onTap: () => _onSelectItem(i),
+      onTap: () => Navigator.of(context).pushReplacementNamed(d.navigate),
     );
   }
 }

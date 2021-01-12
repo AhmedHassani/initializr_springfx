@@ -5,8 +5,8 @@ import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 
-class UserCard extends StatelessWidget {
-  const UserCard({
+class SuppliersCard extends StatelessWidget {
+  const SuppliersCard({
     Key key,
   }) : super(key: key);
 
@@ -42,29 +42,14 @@ class UserCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         text(
-                          'User Name',
+                          'Suppplier Name',
                           textColor: textColorPrimary,
                           fontSize: 18.0,
                           isBold: true,
                         ),
-                        text(
-                          'neighborhood, City, State, Country. Street, House ',
-                          fontSize: 12.0,
-                          textColor: textColorPrimary,
-                          isPrimary: false,
-                          maxLine: 2,
-                          isLongText: true,
-                        ),
                       ],
                     ),
                   ),
-                  SvgPicture.asset(
-                    Assets.icons.sharedIcons.selectedCustomer.path,
-                    width: 40,
-                    height: 40,
-                    //TODO to make logic for changing color
-                    // color: ,
-                  )
                 ],
               ),
             ),

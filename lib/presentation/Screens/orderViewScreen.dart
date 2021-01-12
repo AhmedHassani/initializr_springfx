@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -120,7 +121,7 @@ class OrderViewScreen extends StatelessWidget {
                     '€20.00',
                     fontSize: 16.0,
                     isPrimary: false,
-                    textColor: mainBlueColor,
+                    textColor: mainGreenColor,
                   ),
                 ],
               )

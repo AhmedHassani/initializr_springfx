@@ -102,7 +102,7 @@ dialogContent(BuildContext context) {
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: mainBlueColor,
+                        color: mainGreenColor,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: FlatButton(

@@ -7,25 +7,22 @@ import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
-class UserScreen extends StatefulWidget {
-  const UserScreen({Key key}) : super(key: key);
+class SupplierDetailsScreen extends StatefulWidget {
+  const SupplierDetailsScreen({Key key}) : super(key: key);
 
   @override
-  _UserScreenState createState() => _UserScreenState();
+  _SupplierDetailsScreenState createState() => _SupplierDetailsScreenState();
 }
 
-class _UserScreenState extends State<UserScreen>
+class _SupplierDetailsScreenState extends State<SupplierDetailsScreen>
     with SingleTickerProviderStateMixin {
   TabController _controller;
   int _selectedIndex = 0;
 
   List<Widget> list = [
-    Tab(text: 'General'),
-    Tab(text: 'Sell'),
-    Tab(text: 'Info'),
-    Tab(text: 'Note'),
-    Tab(text: 'Agents'),
-    Tab(text: 'Connection'),
+    Tab(text: 'Menu 1'),
+    Tab(text: 'Menu 2'),
+    Tab(text: 'Menu 3'),
   ];
 
   @override
@@ -45,13 +42,10 @@ class _UserScreenState extends State<UserScreen>
 
   @override
   Widget build(BuildContext context) {
-    Function onPressed =
-        () => Navigator.of(context).pushNamed('/InsertOrderScreen');
     return Scaffold(
       drawer: NavigationDrawer(),
-      floatingActionButton: buildFloatingButton(
-          context, Assets.icons.sharedIcons.addToCart.path, 'Order', onPressed),
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
         bottom: TabBar(
           // automaticIndicatorColorAdjustment: true,
           indicatorSize: TabBarIndicatorSize.label,
@@ -70,7 +64,7 @@ class _UserScreenState extends State<UserScreen>
         toolbarHeight: 98,
         centerTitle: true,
         title: text(
-          'User Name',
+          'Supplier Name',
           fontSize: 18.0,
           isPrimary: false,
           textColor: textColorSecondary,
@@ -79,21 +73,6 @@ class _UserScreenState extends State<UserScreen>
       body: TabBarView(
         controller: _controller,
         children: [
-          Center(
-              child: Text(
-            _selectedIndex.toString(),
-            style: TextStyle(fontSize: 40),
-          )),
-          Center(
-              child: Text(
-            _selectedIndex.toString(),
-            style: TextStyle(fontSize: 40),
-          )),
-          Center(
-              child: Text(
-            _selectedIndex.toString(),
-            style: TextStyle(fontSize: 40),
-          )),
           Center(
               child: Text(
             _selectedIndex.toString(),

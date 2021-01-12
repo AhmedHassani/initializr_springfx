@@ -4,6 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Widgets/cartOdersCard.dart';
 import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
+import 'package:giesse_app/presentation/Widgets/folderCard.dart';
+import 'package:giesse_app/presentation/Widgets/orderHistoryCard.dart';
 import 'package:giesse_app/presentation/Widgets/searchBar.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
@@ -13,14 +15,14 @@ import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/Widgets/userCard.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
-class CartScreen extends StatefulWidget {
-  CartScreen({Key key}) : super(key: key);
+class CatalogScreen extends StatefulWidget {
+  CatalogScreen({Key key}) : super(key: key);
 
   @override
-  _CartScreenState createState() => _CartScreenState();
+  _CatalogScreenState createState() => _CatalogScreenState();
 }
 
-class _CartScreenState extends State<CartScreen> {
+class _CatalogScreenState extends State<CatalogScreen> {
   TabController _controller;
   @override
   Widget build(BuildContext context) {
@@ -35,34 +37,17 @@ class _CartScreenState extends State<CartScreen> {
         builder: (context) => Stack(
           fit: StackFit.expand,
           children: [
+            Positioned(
+              top: 100,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 20, left: 20, bottom: 13),
+                child: buildUsersGridView(),
+              ),
+            ),
             buildFloatingSearchBar(
               context,
               SizeConfig.isPortrait,
-              actionsCustomersScreen,
-            ),
-            Positioned(
-              top: 135,
-              child: buildUsersListView(),
-            ),
-            Positioned(
-              top: 100,
-              left: 25,
-              child: Wrap(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Chip(
-                      label: Text('Open'),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Chip(
-                      label: Text('Closed'),
-                    ),
-                  )
-                ],
-              ),
+              catalogScreen,
             ),
           ],
         ),
@@ -70,13 +55,19 @@ class _CartScreenState extends State<CartScreen> {
     );
   }
 
-  Container buildUsersListView() {
+  Container buildUsersGridView() {
     return Container(
-      width: SizeConfig.screenWidth,
+      // color: app_background,
+      width: SizeConfig.screenWidth - 40,
       height: SizeConfig.screenHeight - 100,
-      child: ListView.builder(
-        itemCount: 2,
-        itemBuilder: (_, index) => CartOrdersCard(),
+      child: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 13,
+            mainAxisSpacing: 13,
+            childAspectRatio: 162 / 186),
+        itemCount: 4,
+        itemBuilder: (_, index) => FolderCard(),
       ),
     );
   }

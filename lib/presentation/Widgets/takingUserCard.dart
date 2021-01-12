@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:giesse_app/gen/assets.gen.dart';
@@ -42,13 +43,13 @@ class TakingUserCard extends StatelessWidget {
                     children: [
                       text(
                         'Cash out',
-                        textColor: mainBlueColor,
+                        textColor: mainGreenColor,
                         fontSize: 16.0,
                         isPrimary: false,
                       ),
                       Icon(
                         Icons.arrow_forward,
-                        color: mainBlueColor,
+                        color: mainGreenColor,
                         size: 24,
                       ),
                     ],
@@ -95,7 +96,7 @@ class TakingUserCard extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(
                       color: isPaid
-                          ? secondBlueColor
+                          ? secondGreenColor
                           : Color.fromRGBO(255, 215, 215, 1),
                       borderRadius: BorderRadius.circular(14.5),
                     ),
@@ -108,7 +109,7 @@ class TakingUserCard extends StatelessWidget {
                         isPaid ? 'Paid' : 'Expired',
                         isPrimary: false,
                         isBold: true,
-                        textColor: isPaid ? mainBlueColor : expiredRedColor,
+                        textColor: isPaid ? mainGreenColor : expiredRedColor,
                       ),
                     ),
                   ),

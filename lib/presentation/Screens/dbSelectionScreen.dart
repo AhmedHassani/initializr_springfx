@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:giesse_app/infrastructure/dummyData/databases.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
@@ -50,8 +51,8 @@ class DatabaseSelection extends StatelessWidget {
                               //   isVolume = value;
                               // });
                             },
-                            activeTrackColor: Color.fromRGBO(241, 245, 254, 1),
-                            activeColor: Color.fromRGBO(112, 149, 254, 1),
+                            activeTrackColor: secondGreenColor,
+                            activeColor: mainGreenColor,
                           ),
                         ],
                       ),
@@ -152,7 +153,7 @@ class DatabaseSelection extends StatelessWidget {
               Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Color.fromRGBO(112, 149, 254, 1),
+                  color: mainGreenColor,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: FlatButton(
@@ -165,6 +166,7 @@ class DatabaseSelection extends StatelessWidget {
                       fontSize: 18.0,
                       isPrimary: false,
                       textColor: Colors.white,
+                      isBold: true,
                     ),
                   ),
                 ),

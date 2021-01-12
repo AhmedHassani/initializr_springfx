@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:giesse_app/presentation/Widgets/textField.dart';
+import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
@@ -59,7 +60,7 @@ class SignInScreenState extends State<SignInScreen> {
                     Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: Color.fromRGBO(112, 149, 254, 1),
+                        color: mainGreenColor,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: FlatButton(
@@ -81,7 +82,7 @@ class SignInScreenState extends State<SignInScreen> {
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Color.fromRGBO(241, 245, 254, 1),
+                          color: secondGreenColor,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: FlatButton(
@@ -92,7 +93,7 @@ class SignInScreenState extends State<SignInScreen> {
                               'Login as a guest',
                               fontSize: 18.0,
                               isPrimary: false,
-                              textColor: Color.fromRGBO(112, 149, 254, 1),
+                              textColor: mainGreenColor,
                             ),
                           ),
                         ),

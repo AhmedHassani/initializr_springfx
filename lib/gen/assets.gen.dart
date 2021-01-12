@@ -2,7 +2,7 @@
 /// *****************************************************
 ///  FlutterGen
 /// *****************************************************
-
+// @dart=2.9
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
@@ -38,6 +38,8 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  SvgGenImage get catalogFolderImage =>
+      const SvgGenImage('assets/images/CatalogFolderImage.svg');
   SvgGenImage get dataBaseIcon =>
       const SvgGenImage('assets/images/DataBaseIcon.svg');
   AssetGenImage get databaseIcon =>

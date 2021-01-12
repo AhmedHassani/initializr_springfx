@@ -1,8 +1,10 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Widgets/cartOdersCard.dart';
 import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
+import 'package:giesse_app/presentation/Widgets/orderHistoryCard.dart';
 import 'package:giesse_app/presentation/Widgets/searchBar.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
@@ -108,7 +110,7 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
           'Change',
           fontSize: 12.0,
           isPrimary: false,
-          textColor: mainBlueColor,
+          textColor: mainGreenColor,
         ),
       ),
     );
@@ -121,7 +123,7 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
       height: SizeConfig.screenHeight - 100,
       child: ListView.builder(
         itemCount: 2,
-        itemBuilder: (_, index) => CartOrdersCard(),
+        itemBuilder: (_, index) => OrderHistoryCard(),
       ),
     );
   }

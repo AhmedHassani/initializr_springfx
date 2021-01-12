@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
