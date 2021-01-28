@@ -107,24 +107,26 @@ class NavigationDrawerState extends State<NavigationDrawer> {
     }
 
     return Drawer(
-      child: Column(
-        children: <Widget>[
-          SafeArea(
-            child: Padding(
-              padding: EdgeInsets.all(25),
-              child: Image.asset(
-                'assets/images/giesseLogo2.png',
-                width: 162,
+      child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            SafeArea(
+              child: Padding(
+                padding: EdgeInsets.all(25),
+                child: Image.asset(
+                  'assets/images/giesseLogo2.png',
+                  width: 162,
+                ),
               ),
             ),
-          ),
-          Divider(),
-          Column(children: drawerOptions1),
-          Divider(),
-          Column(children: drawerOptions2),
-          Divider(),
-          Column(children: drawerOptions3),
-        ],
+            Divider(),
+            Column(children: drawerOptions1),
+            Divider(),
+            Column(children: drawerOptions2),
+            Divider(),
+            Column(children: drawerOptions3),
+          ],
+        ),
       ),
     );
   }
