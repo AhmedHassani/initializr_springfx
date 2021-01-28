@@ -9,6 +9,7 @@ import 'package:giesse_app/presentation/Screens/orderHistoryScreen.dart';
 import 'package:giesse_app/presentation/Screens/orderViewScreen.dart';
 import 'package:giesse_app/presentation/Screens/productsScreen.dart';
 import 'package:giesse_app/presentation/Screens/splashScreen.dart';
+import 'package:giesse_app/presentation/Screens/supplierActivityScreen.dart';
 import 'package:giesse_app/presentation/Screens/supplierDetailsScreen.dart';
 import 'package:giesse_app/presentation/Screens/suppliersScreen.dart';
 import 'package:giesse_app/presentation/Screens/takingScreen.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 primarySwatch: Colors.blue,
               ),
-              home: SplashScreen(),
+              home: SupplierActivityScreen(),
             );
           },
         );
