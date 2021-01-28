@@ -18,6 +18,7 @@ import 'package:giesse_app/presentation/Screens/takingScreen.dart';
 import 'package:giesse_app/presentation/Screens/userScreen.dart';
 
 // Navigator.of(context).pushReplacementNamed('/DownloadingDataScreen'),
+// This file to make routes for screens
 class AppRouter {
   Route onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {

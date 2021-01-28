@@ -1,18 +1,12 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Widgets/cartOdersCard.dart';
-import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
 import 'package:giesse_app/presentation/Widgets/searchBar.dart';
-import 'package:giesse_app/presentation/Widgets/text.dart';
-import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/utils/listOfActionsSearchBar.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
-import 'package:giesse_app/presentation/Widgets/userCard.dart';
-import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
+// This Screen is to show the cart of open/closed orders
 class CartScreen extends StatefulWidget {
   CartScreen({Key key}) : super(key: key);
 
@@ -21,7 +15,7 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
-  TabController _controller;
+  // TabController _controller;
   @override
   Widget build(BuildContext context) {
     // Function onPressed =
@@ -35,6 +29,7 @@ class _CartScreenState extends State<CartScreen> {
         builder: (context) => Stack(
           fit: StackFit.expand,
           children: [
+            // This Stack is contains of search bar, chips and the listtile of cards of orders
             buildFloatingSearchBar(
               context,
               SizeConfig.isPortrait,
@@ -47,22 +42,7 @@ class _CartScreenState extends State<CartScreen> {
             Positioned(
               top: 100,
               left: 25,
-              child: Wrap(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Chip(
-                      label: Text('Open'),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Chip(
-                      label: Text('Closed'),
-                    ),
-                  )
-                ],
-              ),
+              child: buildChips(),
             ),
           ],
         ),
@@ -70,6 +50,27 @@ class _CartScreenState extends State<CartScreen> {
     );
   }
 
+// This method to build the chips
+  Wrap buildChips() {
+    return Wrap(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Chip(
+            label: Text('Open'),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Chip(
+            label: Text('Closed'),
+          ),
+        )
+      ],
+    );
+  }
+
+// this Method to build cards of cart orders
   Container buildUsersListView() {
     return Container(
       width: SizeConfig.screenWidth,

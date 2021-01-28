@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:giesse_app/presentation/Screens/signInScreen.dart';
 import 'package:giesse_app/presentation/Widgets/textField.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
+// This dialog to record the cash out from taking screen.
 class CashOutDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,8 +21,6 @@ class CashOutDialog extends StatelessWidget {
 }
 
 dialogContent(BuildContext context) {
-  // var width = MediaQuery.of(context).size.width;
-
   return Container(
       decoration: new BoxDecoration(
         color: Colors.white,
@@ -45,7 +43,6 @@ dialogContent(BuildContext context) {
           Column(
             children: [
               Row(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
                     onTap: () {

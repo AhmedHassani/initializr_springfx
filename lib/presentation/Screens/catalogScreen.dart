@@ -1,20 +1,12 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:giesse_app/gen/assets.gen.dart';
-import 'package:giesse_app/presentation/Widgets/cartOdersCard.dart';
-import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
 import 'package:giesse_app/presentation/Widgets/folderCard.dart';
-import 'package:giesse_app/presentation/Widgets/orderHistoryCard.dart';
 import 'package:giesse_app/presentation/Widgets/searchBar.dart';
-import 'package:giesse_app/presentation/Widgets/text.dart';
-import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/utils/listOfActionsSearchBar.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
-import 'package:giesse_app/presentation/Widgets/userCard.dart';
-import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
+// This screen to show the pictrues catalog
 class CatalogScreen extends StatefulWidget {
   CatalogScreen({Key key}) : super(key: key);
 
@@ -23,7 +15,6 @@ class CatalogScreen extends StatefulWidget {
 }
 
 class _CatalogScreenState extends State<CatalogScreen> {
-  TabController _controller;
   @override
   Widget build(BuildContext context) {
     // Function onPressed =
@@ -57,7 +48,6 @@ class _CatalogScreenState extends State<CatalogScreen> {
 
   Container buildUsersGridView() {
     return Container(
-      // color: app_background,
       width: SizeConfig.screenWidth - 40,
       height: SizeConfig.screenHeight - 100,
       child: GridView.builder(

@@ -1,6 +1,5 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
 import 'package:giesse_app/presentation/Widgets/searchBar.dart';
@@ -8,8 +7,8 @@ import 'package:giesse_app/presentation/utils/listOfActionsSearchBar.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/Widgets/userCard.dart';
-import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
+// This is the main screen to show list of customers
 class CustomersScreen extends StatefulWidget {
   CustomersScreen({Key key}) : super(key: key);
 
@@ -52,6 +51,7 @@ class _CustomersScreenState extends State<CustomersScreen> {
     );
   }
 
+// build list of user cards
   Container buildUsersListView() {
     return Container(
       width: SizeConfig.screenWidth,

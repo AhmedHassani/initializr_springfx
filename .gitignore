@@ -50,3 +50,11 @@ android/local.properties
 ios/Flutter/flutter_export_environment.sh
 ios/Flutter/Generated.xcconfig
 ios/Flutter/flutter_export_environment.sh
+ios/Flutter/Generated.xcconfig
+ios/Podfile
+ios/Podfile.lock
+ios/Flutter/Debug.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/Release.xcconfig
+ios/Runner.xcodeproj/project.pbxproj
+ios/Runner.xcworkspace/contents.xcworkspacedata

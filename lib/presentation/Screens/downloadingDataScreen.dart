@@ -6,6 +6,7 @@ import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 import 'package:giesse_app/presentation/Widgets/downloadProgressIndicator.dart';
 
+// This screen to show the progress of downloading the database.
 class DownloadingDataScreen extends StatelessWidget {
   const DownloadingDataScreen({Key key}) : super(key: key);
 

@@ -5,6 +5,7 @@ import 'package:giesse_app/infrastructure/models/drawerItem.dart';
 import 'package:giesse_app/presentation/Screens/customersScreen.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
+// Hambuger menu (Drawer)
 class NavigationDrawer extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {

@@ -5,6 +5,7 @@ import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 import '../utils/responsiveUI.dart';
 
+// this screen to give the user the chosse of what needed database to work on.
 class DatabaseSelection extends StatelessWidget {
   const DatabaseSelection({Key key}) : super(key: key);
 
@@ -75,105 +76,118 @@ class DatabaseSelection extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: GridView.builder(
-                  padding: const EdgeInsets.only(top: 15),
-                  itemCount: databases.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisSpacing: 13,
-                      mainAxisSpacing: 15,
-                      childAspectRatio: 0.8,
-                      crossAxisCount: (SizeConfig.isPortrait == true) ? 2 : 3),
-                  itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                      height: 188,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color.fromRGBO(214, 214, 214, 0.25),
-                            spreadRadius: 5,
-                            blurRadius: 7,
-                            offset: Offset(0, 4), // changes position of shadow
-                          ),
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                text(
-                                  databases[index].name,
-                                  fontSize: 16.0,
-                                  isBold: true,
-                                ),
-                                Radio(
-                                  value: true,
-                                  groupValue: 2,
-                                  onChanged: (value) {
-                                    print('open radio');
-                                    value = true;
-                                    // setState(() {
-                                    //   isVolume = value;
-                                    // });
-                                  },
-                                  activeColor: Color.fromRGBO(112, 149, 254, 1),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-                              child: Stack(
-                                alignment: Alignment.center,
-                                children: [
-                                  Container(
-                                    width: double.infinity,
-                                    height: double.infinity,
-                                    color: databases[index].color,
-                                  ),
-                                  Image.asset(
-                                    'assets/images/DatabaseIcon.png',
-                                    color: databases[index].colorIcon,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    );
-                  },
-                ),
+                child: buildGridView(),
               ),
-              Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: mainGreenColor,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: FlatButton(
-                  onPressed: () => Navigator.of(context)
-                      .pushReplacementNamed('/DownloadingDataScreen'),
-                  child: Padding(
-                    padding: const EdgeInsets.all(13.0),
-                    child: text(
-                      'Sync',
-                      fontSize: 18.0,
-                      isPrimary: false,
-                      textColor: Colors.white,
-                      isBold: true,
-                    ),
-                  ),
-                ),
-              )
+              buildSyncButton(context)
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Container buildSyncButton(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: mainGreenColor,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: FlatButton(
+        onPressed: () => Navigator.of(context)
+            .pushReplacementNamed('/DownloadingDataScreen'),
+        child: Padding(
+          padding: const EdgeInsets.all(13.0),
+          child: text(
+            'Sync',
+            fontSize: 18.0,
+            isPrimary: false,
+            textColor: Colors.white,
+            isBold: true,
+          ),
+        ),
+      ),
+    );
+  }
+
+// build grid to display diffrents databases
+  GridView buildGridView() {
+    return GridView.builder(
+      padding: const EdgeInsets.only(top: 15),
+      itemCount: databases.length,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisSpacing: 13,
+          mainAxisSpacing: 15,
+          childAspectRatio: 0.8,
+          crossAxisCount: (SizeConfig.isPortrait == true) ? 2 : 3),
+      itemBuilder: (BuildContext context, int index) {
+        return buildDatabaseCard(index);
+      },
+    );
+  }
+
+  Container buildDatabaseCard(int index) {
+    return Container(
+      height: 188,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromRGBO(214, 214, 214, 0.25),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 4), // changes position of shadow
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                text(
+                  databases[index].name,
+                  fontSize: 16.0,
+                  isBold: true,
+                ),
+                Radio(
+                  value: true,
+                  groupValue: 2,
+                  onChanged: (value) {
+                    print('open radio');
+                    value = true;
+                    // setState(() {
+                    //   isVolume = value;
+                    // });
+                  },
+                  activeColor: Color.fromRGBO(112, 149, 254, 1),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    color: databases[index].color,
+                  ),
+                  Image.asset(
+                    'assets/images/DatabaseIcon.png',
+                    color: databases[index].colorIcon,
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
