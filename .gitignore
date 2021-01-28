@@ -50,3 +50,4 @@ android/local.properties
 ios/Flutter/flutter_export_environment.sh
 ios/Flutter/Generated.xcconfig
 ios/Flutter/flutter_export_environment.sh
+.packages
