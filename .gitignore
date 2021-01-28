@@ -58,3 +58,4 @@ ios/Flutter/flutter_export_environment.sh
 ios/Flutter/Release.xcconfig
 ios/Runner.xcodeproj/project.pbxproj
 ios/Runner.xcworkspace/contents.xcworkspacedata
+.packages

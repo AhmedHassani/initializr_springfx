@@ -1,6 +1,11 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:giesse_app/presentation/Screens/splashScreen.dart';
+import 'package:giesse_app/presentation/Screens/supplierActivityScreen.dart';
+import 'package:giesse_app/presentation/Screens/supplierDetailsScreen.dart';
+import 'package:giesse_app/presentation/Screens/suppliersScreen.dart';
+import 'package:giesse_app/presentation/Screens/takingScreen.dart';
+import 'package:giesse_app/presentation/Screens/userScreen.dart';
 import 'package:giesse_app/presentation/router/router.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 
@@ -26,7 +31,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 primarySwatch: Colors.blue,
               ),
-              home: SplashScreen(),
+              home: SupplierActivityScreen(),
             );
           },
         );

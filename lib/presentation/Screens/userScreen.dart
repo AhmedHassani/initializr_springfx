@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
-import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
