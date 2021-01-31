@@ -15,7 +15,7 @@ class NavigationDrawer extends StatefulWidget {
 
 class NavigationDrawerState extends State<NavigationDrawer> {
   int _selectedIndex = 0;
-
+// Here to add content of the drawer separated in 3 catagories
   final drawerItemsCategory1 = [
     DrawerItem(
         name: "Customers",
@@ -70,6 +70,8 @@ class NavigationDrawerState extends State<NavigationDrawer> {
         iconPath: Assets.icons.menu.about.path,
         navigate: '/CustomersScreen'),
   ];
+
+  // Functions to handle the logic of selecting item from the drawer
   _getDrawerItemScreen(int pos) {
     return CustomersScreen();
   }
@@ -90,6 +92,7 @@ class NavigationDrawerState extends State<NavigationDrawer> {
 
   @override
   Widget build(BuildContext context) {
+    // Here to build Lists of ListTiles that contains items
     List<Widget> drawerOptions1 = [];
     List<Widget> drawerOptions2 = [];
     List<Widget> drawerOptions3 = [];

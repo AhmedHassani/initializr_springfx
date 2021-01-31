@@ -1,4 +1,5 @@
 // @dart=2.9
+// Model for drawer item section
 class DrawerItem {
   String name;
   String iconPath;
