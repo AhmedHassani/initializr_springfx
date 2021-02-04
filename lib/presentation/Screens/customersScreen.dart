@@ -10,7 +10,7 @@ import 'package:giesse_app/presentation/Widgets/userCard.dart';
 
 // This is the main screen to show list of customers
 class CustomersScreen extends StatefulWidget {
-  CustomersScreen({Key key}) : super(key: key);
+  const CustomersScreen({Key key}) : super(key: key);
 
   @override
   _CustomersScreenState createState() => _CustomersScreenState();
@@ -19,7 +19,7 @@ class CustomersScreen extends StatefulWidget {
 class _CustomersScreenState extends State<CustomersScreen> {
   @override
   Widget build(BuildContext context) {
-    Function onPressed =
+    final Function onPressed =
         () => Navigator.of(context).pushReplacementNamed('/ProductsScreen');
     return Scaffold(
       drawer: Drawer(
@@ -58,7 +58,7 @@ class _CustomersScreenState extends State<CustomersScreen> {
       height: SizeConfig.screenHeight - 100,
       child: ListView.builder(
         itemCount: 42,
-        itemBuilder: (_, index) => UserCard(),
+        itemBuilder: (_, index) => const UserCard(),
       ),
     );
   }

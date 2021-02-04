@@ -22,7 +22,7 @@ class CartOrdersCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(214, 214, 214, 0.25),
               spreadRadius: 5,
@@ -71,7 +71,7 @@ class CartOrdersCard extends StatelessWidget {
                       textColor: textColorSecondary,
                       fontSize: 16.0,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                   ],
@@ -80,7 +80,7 @@ class CartOrdersCard extends StatelessWidget {
               Column(
                 children: [
                   IconButton(
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_forward_ios,
                       color: textColorSecondary,
                     ),

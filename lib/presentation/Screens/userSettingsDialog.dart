@@ -5,6 +5,7 @@ import 'package:giesse_app/presentation/Screens/signInScreen.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
+// Shows setting dialog
 class UserSettingsDialog extends StatefulWidget {
   @override
   UserSettingsDialogState createState() => UserSettingsDialogState();
@@ -37,19 +38,19 @@ class CustomDialog extends StatelessWidget {
   }
 }
 
-dialogContent(BuildContext context) {
+Container dialogContent(BuildContext context) {
   // var width = MediaQuery.of(context).size.width;
 
   return Container(
-      decoration: new BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.white,
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.circular(16),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black26,
             blurRadius: 10.0,
-            offset: const Offset(0.0, 10.0),
+            offset: Offset(0.0, 10.0),
           ),
         ],
       ),
@@ -66,9 +67,9 @@ dialogContent(BuildContext context) {
                   Navigator.pop(context);
                 },
                 child: Container(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     alignment: Alignment.centerLeft,
-                    child: Icon(
+                    child: const Icon(
                       Icons.close,
                       color: Colors.black,
                     )),
@@ -92,7 +93,7 @@ dialogContent(BuildContext context) {
               child: Row(
                 children: [
                   ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(45)),
+                    borderRadius: const BorderRadius.all(Radius.circular(45)),
                     child: Image.asset(
                       'assets/images/avatar.png',
                       width: 59,
@@ -129,7 +130,7 @@ dialogContent(BuildContext context) {
               child: Row(
                 children: [
                   ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(45)),
+                    borderRadius: const BorderRadius.all(Radius.circular(45)),
                     child: Image.asset(
                       'assets/images/avatar.png',
                       color: Colors.green,
@@ -153,7 +154,7 @@ dialogContent(BuildContext context) {
               ),
             ),
           ),
-          Divider(),
+          const Divider(),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: GestureDetector(
@@ -181,7 +182,7 @@ dialogContent(BuildContext context) {
                         ),
                       ],
                     ),
-                    Icon(Icons.arrow_forward_ios),
+                    const Icon(Icons.arrow_forward_ios),
                   ],
                 ),
               ),
@@ -227,8 +228,8 @@ dialogContent(BuildContext context) {
                         //   isVolume = value;
                         // });
                       },
-                      activeTrackColor: Color.fromRGBO(241, 245, 254, 1),
-                      activeColor: Color.fromRGBO(112, 149, 254, 1),
+                      activeTrackColor: const Color.fromRGBO(241, 245, 254, 1),
+                      activeColor: const Color.fromRGBO(112, 149, 254, 1),
                     ),
                   ],
                 ),

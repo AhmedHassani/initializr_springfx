@@ -17,7 +17,7 @@ class ProductCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(214, 214, 214, 0.25),
               spreadRadius: 5,
@@ -33,13 +33,13 @@ class ProductCard extends StatelessWidget {
               Row(
                 children: <Widget>[
                   ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
                     child: SvgPicture.asset(
                       'assets/images/ImageAvater.svg',
                       width: MediaQuery.of(context).size.width / 4.5,
                       height: MediaQuery.of(context).size.width / 4.7,
                       fit: BoxFit.fill,
                     ),
-                    borderRadius: BorderRadius.circular(10),
                   ),
                   Expanded(
                     child: Column(
@@ -68,10 +68,11 @@ class ProductCard extends StatelessWidget {
                                 textColor: textColorSecondary,
                                 isPrimary: false,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 15,
                               ),
                               text(
+                                // ignore: leading_newlines_in_multiline_strings
                                 '''G: 120,000 KG
 D: 120,000 KG''',
                                 fontSize: 15.0,
@@ -79,7 +80,7 @@ D: 120,000 KG''',
                                 isPrimary: false,
                                 textColor: textColorSecondary,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 4,
                               ),
                             ],
@@ -90,7 +91,7 @@ D: 120,000 KG''',
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
             ],

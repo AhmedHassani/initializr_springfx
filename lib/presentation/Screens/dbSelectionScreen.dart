@@ -14,14 +14,14 @@ class DatabaseSelection extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.fromLTRB(20, 45, 20, 15),
+          padding: const EdgeInsets.fromLTRB(20, 45, 20, 15),
           child: Column(
             children: [
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Color.fromRGBO(214, 214, 214, 0.25),
                       spreadRadius: 5,
@@ -132,7 +132,7 @@ class DatabaseSelection extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Color.fromRGBO(214, 214, 214, 0.25),
             spreadRadius: 5,
@@ -163,7 +163,7 @@ class DatabaseSelection extends StatelessWidget {
                     //   isVolume = value;
                     // });
                   },
-                  activeColor: Color.fromRGBO(112, 149, 254, 1),
+                  activeColor: const Color.fromRGBO(112, 149, 254, 1),
                 ),
               ],
             ),

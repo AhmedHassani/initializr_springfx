@@ -43,7 +43,7 @@ class InsertOrderScreen extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(214, 214, 214, 0.25),
               spreadRadius: 5,
@@ -63,7 +63,7 @@ class InsertOrderScreen extends StatelessWidget {
                 isBold: true,
               ),
             ),
-            Divider(),
+            const Divider(),
             Padding(
               padding:
                   const EdgeInsets.only(bottom: 25, right: 15.5, left: 15.5),
@@ -101,7 +101,7 @@ class InsertOrderScreen extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(214, 214, 214, 0.25),
               spreadRadius: 5,
@@ -121,7 +121,7 @@ class InsertOrderScreen extends StatelessWidget {
                 isBold: true,
               ),
             ),
-            Divider(),
+            const Divider(),
             Padding(
               padding:
                   const EdgeInsets.only(bottom: 25, right: 15.5, left: 15.5),

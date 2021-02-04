@@ -5,19 +5,17 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Screens/cashOutDialog.dart';
 import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
-import 'package:giesse_app/presentation/Widgets/textField.dart';
-import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
-import 'package:giesse_app/presentation/Widgets/downloadProgressIndicator.dart';
 
+// Shows total taking amount
 class TakingInfoScreen extends StatelessWidget {
   const TakingInfoScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Function onPressed =
+    final Function onPressed =
         //TODO
         () => Future.delayed(const Duration(), () {
               showDialog(
@@ -73,7 +71,7 @@ class TakingInfoScreen extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
-            BoxShadow(
+            const BoxShadow(
               color: Color.fromRGBO(214, 214, 214, 0.25),
               spreadRadius: 5,
               blurRadius: 7,
@@ -109,7 +107,7 @@ class TakingInfoScreen extends StatelessWidget {
                   fontSize: 16.0,
                 ),
               ),
-              Divider(),
+              const Divider(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[

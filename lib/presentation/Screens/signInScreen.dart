@@ -6,6 +6,7 @@ import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
+// Login screen
 class SignInScreen extends StatefulWidget {
   @override
   SignInScreenState createState() => SignInScreenState();
@@ -23,18 +24,18 @@ class SignInScreenState extends State<SignInScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                margin: EdgeInsets.all(24),
+                margin: const EdgeInsets.all(24),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       blurRadius: 4,
                       color: Colors.white,
                     ),
                   ],
                 ),
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
@@ -47,14 +48,14 @@ class SignInScreenState extends State<SignInScreen> {
                       hint: "Email Address",
                       isPassword: false,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     EditText(
                       hint: " Password",
                       isSecure: true,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 90,
                     ),
                     Container(

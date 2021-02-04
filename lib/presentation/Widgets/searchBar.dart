@@ -9,7 +9,7 @@ Widget buildFloatingSearchBar(
     padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
     child: FloatingSearchBar(
       borderRadius: BorderRadius.circular(10),
-      padding: EdgeInsets.fromLTRB(5, 2, 0, 2),
+      padding: const EdgeInsets.fromLTRB(5, 2, 0, 2),
       // Icons on left
       leadingActions: [
         FloatingSearchBarAction(

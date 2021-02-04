@@ -22,13 +22,13 @@ class SuppliersCard extends StatelessWidget {
         children: [
           ListTile(
             leading: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
               child: SvgPicture.asset(
                 Assets.icons.userAvater.path,
                 // width: MediaQuery.of(context).size.width / 4.5,
                 // height: MediaQuery.of(context).size.width / 4.7,
                 fit: BoxFit.fill,
               ),
-              borderRadius: BorderRadius.circular(10),
             ),
             title: Padding(
               padding: const EdgeInsets.only(left: 10.0),
@@ -54,7 +54,7 @@ class SuppliersCard extends StatelessWidget {
               ),
             ),
           ),
-          Divider(),
+          const Divider(),
         ],
       ),
     );

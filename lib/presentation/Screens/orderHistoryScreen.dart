@@ -2,8 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:giesse_app/gen/assets.gen.dart';
-import 'package:giesse_app/presentation/Widgets/cartOdersCard.dart';
-import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
 import 'package:giesse_app/presentation/Widgets/orderHistoryCard.dart';
 import 'package:giesse_app/presentation/Widgets/searchBar.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
@@ -11,18 +9,17 @@ import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/utils/listOfActionsSearchBar.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
-import 'package:giesse_app/presentation/Widgets/userCard.dart';
-import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
+// This Screen to show the orders history for a user that has been selected and the ablity to edit it
 class OrderHistoryScreen extends StatefulWidget {
-  OrderHistoryScreen({Key key}) : super(key: key);
+  const OrderHistoryScreen({Key key}) : super(key: key);
 
   @override
   _OrderHistoryScreenState createState() => _OrderHistoryScreenState();
 }
 
 class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
-  TabController _controller;
+  // TabController _controller;
   @override
   Widget build(BuildContext context) {
     // Function onPressed =
@@ -46,13 +43,13 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
               ),
               Positioned(
                 top: 170,
-                child: buildUsersListView(),
+                child: buildOrdersListView(),
               ),
               Positioned(
                 top: 115,
                 left: 10,
                 child: Container(
-                  padding: EdgeInsets.only(bottom: 20),
+                  padding: const EdgeInsets.only(bottom: 20),
                   color: Colors.white,
                   width: SizeConfig.screenWidth,
                   child: buildListTile(),
@@ -68,13 +65,13 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
   ListTile buildListTile() {
     return ListTile(
       leading: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
         child: SvgPicture.asset(
           Assets.icons.userAvater.path,
           // width: MediaQuery.of(context).size.width / 4.5,
           // height: MediaQuery.of(context).size.width / 4.7,
           fit: BoxFit.fill,
         ),
-        borderRadius: BorderRadius.circular(10),
       ),
       title: Padding(
         padding: const EdgeInsets.only(left: 10.0),
@@ -116,14 +113,14 @@ class _OrderHistoryScreenState extends State<OrderHistoryScreen> {
     );
   }
 
-  Container buildUsersListView() {
+  Container buildOrdersListView() {
     return Container(
       color: app_background,
       width: SizeConfig.screenWidth,
       height: SizeConfig.screenHeight - 100,
       child: ListView.builder(
         itemCount: 2,
-        itemBuilder: (_, index) => OrderHistoryCard(),
+        itemBuilder: (_, index) => const OrderHistoryCard(),
       ),
     );
   }

@@ -35,10 +35,10 @@ Widget buildFloatingButton(
             ),
           ),
           Container(
-              padding: EdgeInsets.all(12),
+              padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: Color.fromRGBO(54, 205, 186, 1),
+                color: const Color.fromRGBO(54, 205, 186, 1),
               ),
               child: SvgPicture.asset(
                 iconPath,

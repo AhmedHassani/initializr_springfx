@@ -8,7 +8,7 @@ enum DeviceScreenType {
 }
 
 DeviceScreenType getDeviceType(MediaQueryData mediaQuery) {
-  var orientation = mediaQuery.orientation;
+  final orientation = mediaQuery.orientation;
 
   // Fixed Device width (changes with orientation)
   double deviceWidth = 0;
@@ -65,7 +65,5 @@ class SizeConfig {
     imageSizeMultiplier = _blockWidth;
     heightMultiplier = _blockHeight;
     widthMultiplier = _blockWidth;
-
-    print(screenWidth);
   }
 }

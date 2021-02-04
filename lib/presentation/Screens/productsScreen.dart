@@ -7,8 +7,8 @@ import 'package:giesse_app/presentation/Widgets/searchBar.dart';
 import 'package:giesse_app/presentation/utils/listOfActionsSearchBar.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
-import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
+// show products
 class ProductsScreen extends StatefulWidget {
   ProductsScreen({Key key}) : super(key: key);
 
@@ -37,7 +37,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
           children: [
             Positioned(
               top: 80,
-              child: buildUsersListView(),
+              child: buildProductsListView(),
             ),
             Positioned(
               child: buildFloatingSearchBar(
@@ -52,13 +52,14 @@ class _ProductsScreenState extends State<ProductsScreen> {
     );
   }
 
-  Container buildUsersListView() {
+// Build a list of products with info about them
+  Container buildProductsListView() {
     return Container(
       width: SizeConfig.screenWidth,
       height: SizeConfig.screenHeight - 100,
       child: ListView.builder(
         itemCount: 42,
-        itemBuilder: (_, index) => ProductCard(),
+        itemBuilder: (_, index) => const ProductCard(),
       ),
     );
   }

@@ -11,14 +11,14 @@ class DownloadProgressIndicator extends StatelessWidget {
           Container(
             width: 238,
             height: 238,
-            padding: EdgeInsets.all(5),
+            padding: const EdgeInsets.all(5),
             child: AirCircularStateProgressIndicator(
-              pathColor: Color.fromRGBO(239, 252, 234, 100),
-              size: Size(238, 238),
+              pathColor: const Color.fromRGBO(239, 252, 234, 100),
+              size: const Size(238, 238),
               value: 7.5 / 10 * 100, //1~100
               valueColor: ColorTween(
-                begin: Color.fromRGBO(67, 202, 91, 100),
-                end: Color.fromRGBO(67, 202, 91, 100),
+                begin: const Color.fromRGBO(67, 202, 91, 100),
+                end: const Color.fromRGBO(67, 202, 91, 100),
               ).transform(1 / 10),
               pathStrokeWidth: 10,
               valueStrokeWidth: 10,
@@ -29,7 +29,7 @@ class DownloadProgressIndicator extends StatelessWidget {
           Text(
             "${(7.5 / 10 * 100).toInt()}%",
             style: TextStyle(
-              color: Color.fromRGBO(67, 202, 91, 100),
+              color: const Color.fromRGBO(67, 202, 91, 100),
               fontSize: 48,
             ),
           ),

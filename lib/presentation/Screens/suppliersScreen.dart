@@ -1,8 +1,5 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:giesse_app/gen/assets.gen.dart';
-import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
 import 'package:giesse_app/presentation/Widgets/searchBar.dart';
 import 'package:giesse_app/presentation/Widgets/suppliersCard.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
@@ -10,11 +7,10 @@ import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/utils/listOfActionsSearchBar.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
-import 'package:giesse_app/presentation/Widgets/userCard.dart';
-import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
+// Show list of suppliers
 class SuppliersScreen extends StatefulWidget {
-  SuppliersScreen({Key key}) : super(key: key);
+  const SuppliersScreen({Key key}) : super(key: key);
 
   @override
   _SuppliersScreenState createState() => _SuppliersScreenState();
@@ -36,7 +32,7 @@ class _SuppliersScreenState extends State<SuppliersScreen> {
           children: [
             Positioned(
               top: 110,
-              child: buildUsersListView(),
+              child: buildSuppliersListView(),
             ),
             Positioned(
               top: 100,
@@ -59,13 +55,13 @@ class _SuppliersScreenState extends State<SuppliersScreen> {
     );
   }
 
-  Container buildUsersListView() {
+  Container buildSuppliersListView() {
     return Container(
       width: SizeConfig.screenWidth,
       height: SizeConfig.screenHeight - 100,
       child: ListView.builder(
-        itemCount: 42,
-        itemBuilder: (_, index) => SuppliersCard(),
+        itemCount: 10,
+        itemBuilder: (_, index) => const SuppliersCard(),
       ),
     );
   }

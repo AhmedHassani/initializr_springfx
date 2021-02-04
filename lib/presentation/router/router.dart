@@ -28,19 +28,19 @@ class AppRouter {
         );
       case '/DatabaseSelection':
         return MaterialPageRoute(
-          builder: (_) => DatabaseSelection(),
+          builder: (_) => const DatabaseSelection(),
         );
       case '/DownloadingDataScreen':
         return MaterialPageRoute(
-          builder: (_) => DownloadingDataScreen(),
+          builder: (_) => const DownloadingDataScreen(),
         );
       case '/CustomersScreen':
         return MaterialPageRoute(
-          builder: (_) => CustomersScreen(),
+          builder: (_) => const CustomersScreen(),
         );
       case '/InsertOrderScreen':
         return MaterialPageRoute(
-          builder: (_) => InsertOrderScreen(),
+          builder: (_) => const InsertOrderScreen(),
         );
       case '/ProductsScreen':
         return MaterialPageRoute(
@@ -48,43 +48,43 @@ class AppRouter {
         );
       case '/UserScreen':
         return MaterialPageRoute(
-          builder: (_) => UserScreen(),
+          builder: (_) => const UserScreen(),
         );
       case '/TakingScreen':
         return MaterialPageRoute(
-          builder: (_) => TakingScreen(),
+          builder: (_) => const TakingScreen(),
         );
       case '/TakingInfoScreen':
         return MaterialPageRoute(
-          builder: (_) => TakingInfoScreen(),
+          builder: (_) => const TakingInfoScreen(),
         );
       case '/CartScreen':
         return MaterialPageRoute(
-          builder: (_) => CartScreen(),
+          builder: (_) => const CartScreen(),
         );
       case '/OrderViewScreen':
         return MaterialPageRoute(
-          builder: (_) => OrderViewScreen(),
+          builder: (_) => const OrderViewScreen(),
         );
       case '/CatalogScreen':
         return MaterialPageRoute(
-          builder: (_) => CatalogScreen(),
+          builder: (_) => const CatalogScreen(),
         );
       case '/EditOrderScreen':
         return MaterialPageRoute(
-          builder: (_) => EditOrderScreen(),
+          builder: (_) => const EditOrderScreen(),
         );
       case '/OrderHistoryScreen':
         return MaterialPageRoute(
-          builder: (_) => OrderHistoryScreen(),
+          builder: (_) => const OrderHistoryScreen(),
         );
       case '/SupplierDetailsScreen':
         return MaterialPageRoute(
-          builder: (_) => SupplierDetailsScreen(),
+          builder: (_) => const SupplierDetailsScreen(),
         );
       case '/SuppliersScreen':
         return MaterialPageRoute(
-          builder: (_) => SuppliersScreen(),
+          builder: (_) => const SuppliersScreen(),
         );
       default:
         return null;

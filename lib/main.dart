@@ -1,5 +1,9 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
+import 'package:giesse_app/presentation/Screens/editOrderScreen.dart';
+import 'package:giesse_app/presentation/Screens/insertOrderScreen.dart';
+import 'package:giesse_app/presentation/Screens/orderHistoryScreen.dart';
+import 'package:giesse_app/presentation/Screens/orderViewScreen.dart';
 import 'package:giesse_app/presentation/Screens/splashScreen.dart';
 import 'package:giesse_app/presentation/Screens/supplierActivityScreen.dart';
 import 'package:giesse_app/presentation/Screens/supplierDetailsScreen.dart';
@@ -31,7 +35,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 primarySwatch: Colors.blue,
               ),
-              home: SupplierActivityScreen(),
+              home: const OrderViewScreen(),
             );
           },
         );

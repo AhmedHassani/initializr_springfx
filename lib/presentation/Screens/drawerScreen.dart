@@ -93,19 +93,19 @@ class NavigationDrawerState extends State<NavigationDrawer> {
   @override
   Widget build(BuildContext context) {
     // Here to build Lists of ListTiles that contains items
-    List<Widget> drawerOptions1 = [];
-    List<Widget> drawerOptions2 = [];
-    List<Widget> drawerOptions3 = [];
+    final List<Widget> drawerOptions1 = [];
+    final List<Widget> drawerOptions2 = [];
+    final List<Widget> drawerOptions3 = [];
     for (var i = 0; i < drawerItemsCategory1.length; i++) {
-      var d = drawerItemsCategory1[i];
+      final d = drawerItemsCategory1[i];
       drawerOptions1.add(buildListTile(d, i));
     }
     for (var i = 0; i < drawerItemsCategory2.length; i++) {
-      var d = drawerItemsCategory2[i];
+      final d = drawerItemsCategory2[i];
       drawerOptions2.add(buildListTile(d, i));
     }
     for (var i = 0; i < drawerItemsCategory3.length; i++) {
-      var d = drawerItemsCategory3[i];
+      final d = drawerItemsCategory3[i];
       drawerOptions3.add(buildListTile(d, i));
     }
 
@@ -115,18 +115,18 @@ class NavigationDrawerState extends State<NavigationDrawer> {
           children: <Widget>[
             SafeArea(
               child: Padding(
-                padding: EdgeInsets.all(25),
+                padding: const EdgeInsets.all(25),
                 child: Image.asset(
                   'assets/images/giesseLogo2.png',
                   width: 162,
                 ),
               ),
             ),
-            Divider(),
+            const Divider(),
             Column(children: drawerOptions1),
-            Divider(),
+            const Divider(),
             Column(children: drawerOptions2),
-            Divider(),
+            const Divider(),
             Column(children: drawerOptions3),
           ],
         ),

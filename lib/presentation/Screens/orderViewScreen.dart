@@ -4,14 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Screens/cashOutDialog.dart';
-import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
-import 'package:giesse_app/presentation/Widgets/textField.dart';
-import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
-import 'package:giesse_app/presentation/Widgets/downloadProgressIndicator.dart';
 
+// Cart order view
 class OrderViewScreen extends StatelessWidget {
   const OrderViewScreen({Key key}) : super(key: key);
 
@@ -59,21 +56,21 @@ class OrderViewScreen extends StatelessWidget {
         child: Column(
           children: [
             //TODO fix what type of input
-            buildSection1(),
+            buildCard(),
           ],
         ),
       ),
     );
   }
 
-  Padding buildSection1() {
+  Padding buildCard() {
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(214, 214, 214, 0.25),
               spreadRadius: 5,
@@ -99,7 +96,7 @@ class OrderViewScreen extends StatelessWidget {
                     onPressed: () => print('pressed'),
                     icon: SvgPicture.asset(
                       Assets.icons.sharedIcons.editOrder.path,
-                      color: Color.fromRGBO(177, 184, 202, 1),
+                      color: const Color.fromRGBO(177, 184, 202, 1),
                     ),
                   )
                 ],

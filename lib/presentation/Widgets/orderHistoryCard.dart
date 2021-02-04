@@ -22,7 +22,7 @@ class OrderHistoryCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(214, 214, 214, 0.25),
               spreadRadius: 5,
@@ -71,7 +71,7 @@ class OrderHistoryCard extends StatelessWidget {
                       textColor: textColorSecondary,
                       fontSize: 16.0,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     Row(
@@ -80,14 +80,14 @@ class OrderHistoryCard extends StatelessWidget {
                           'Cod: 1234',
                           fontSize: 16.0,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 38,
                         ),
                         text(
                           'kg: 15,00',
                           fontSize: 16.0,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 37,
                         ),
                         text(
@@ -96,7 +96,7 @@ class OrderHistoryCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -129,7 +129,7 @@ class OrderHistoryCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 24,
                     )
                   ],

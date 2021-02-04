@@ -35,7 +35,7 @@ class EditTextState extends State<EditText> {
     return TextFormField(
       controller: widget.mController,
       obscureText: widget.isPassword,
-      style: TextStyle(
+      style: const TextStyle(
         fontSize: 16.0,
       ),
       decoration: InputDecoration(
@@ -46,21 +46,23 @@ class EditTextState extends State<EditText> {
                     widget.isPassword = !widget.isPassword;
                   });
                 },
-                child: new Icon(widget.isPassword
+                child: Icon(widget.isPassword
                     ? Icons.visibility
                     : Icons.visibility_off),
               )
             : null,
-        contentPadding: EdgeInsets.fromLTRB(16, 10, 16, 10),
+        contentPadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
         hintText: widget.hint,
         hintStyle: TextStyle(color: Color(0XFFBABFB6)),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Color(0XFFB4BBC2), width: 0.0),
+          borderSide:
+              const BorderSide(color: const Color(0XFFB4BBC2), width: 0.0),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Color(0XFFB4BBC2), width: 0.0),
+          borderSide:
+              const BorderSide(color: const Color(0XFFB4BBC2), width: 0.0),
         ),
       ),
     );

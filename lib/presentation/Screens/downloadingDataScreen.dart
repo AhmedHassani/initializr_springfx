@@ -12,7 +12,7 @@ class DownloadingDataScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double padding = (17.6 / 100) * SizeConfig.screenHeight;
+    final double padding = (17.6 / 100) * SizeConfig.screenHeight;
     return Scaffold(
       drawer: NavigationDrawer(),
       appBar: AppBar(
@@ -42,7 +42,7 @@ class DownloadingDataScreen extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Color.fromRGBO(214, 214, 214, 0.25),
                   spreadRadius: 5,

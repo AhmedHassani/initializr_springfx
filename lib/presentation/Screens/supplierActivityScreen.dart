@@ -4,13 +4,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
-import 'package:giesse_app/presentation/Widgets/searchBar.dart';
-import 'package:giesse_app/presentation/utils/colors.dart';
-import 'package:giesse_app/presentation/Widgets/text.dart';
 import 'package:giesse_app/presentation/utils/listOfActionsSearchBar.dart';
 import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 
+// Screen to show activity informaton of a supplier, each tab has details
+// TODO FIX TABS AND THE SEARCHBAR
 class SupplierActivityScreen extends StatefulWidget {
   const SupplierActivityScreen({Key key}) : super(key: key);
 
@@ -24,10 +23,10 @@ class _SupplierActivityScreenState extends State<SupplierActivityScreen>
   int _selectedIndex = 0;
 
   List<Widget> list = [
-    Tab(text: 'Leads'),
-    Tab(text: 'Offers'),
-    Tab(text: 'New Leads'),
-    Tab(text: 'Performed activity'),
+    const Tab(text: 'Leads'),
+    const Tab(text: 'Offers'),
+    const Tab(text: 'New Leads'),
+    const Tab(text: 'Performed activity'),
   ];
 
   @override
@@ -41,13 +40,13 @@ class _SupplierActivityScreenState extends State<SupplierActivityScreen>
       setState(() {
         _selectedIndex = _controller.index;
       });
-      print("Selected Index: " + _controller.index.toString());
+      print("Selected Index: ${_controller.index}");
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    Function onPressed =
+    final Function onPressed =
         () => Navigator.of(context).pushNamed('/InsertOrderScreen');
     return Scaffold(
       drawer: NavigationDrawer(),
@@ -57,7 +56,7 @@ class _SupplierActivityScreenState extends State<SupplierActivityScreen>
         bottom: TabBar(
           // automaticIndicatorColorAdjustment: true,
           indicatorSize: TabBarIndicatorSize.label,
-          labelColor: Color.fromRGBO(94, 136, 254, 1),
+          labelColor: const Color.fromRGBO(94, 136, 254, 1),
           unselectedLabelColor: Colors.grey,
           isScrollable: true,
           onTap: (index) {
@@ -126,22 +125,22 @@ class _SupplierActivityScreenState extends State<SupplierActivityScreen>
           Center(
               child: Text(
             _selectedIndex.toString(),
-            style: TextStyle(fontSize: 40),
+            style: const TextStyle(fontSize: 40),
           )),
           Center(
               child: Text(
             _selectedIndex.toString(),
-            style: TextStyle(fontSize: 40),
+            style: const TextStyle(fontSize: 40),
           )),
           Center(
               child: Text(
             _selectedIndex.toString(),
-            style: TextStyle(fontSize: 40),
+            style: const TextStyle(fontSize: 40),
           )),
           Center(
               child: Text(
             _selectedIndex.toString(),
-            style: TextStyle(fontSize: 40),
+            style: const TextStyle(fontSize: 40),
           )),
         ],
       ),

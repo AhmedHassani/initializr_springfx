@@ -5,13 +5,14 @@ import 'package:giesse_app/presentation/Widgets/text.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
-  _SplashScreenState createState() => new _SplashScreenState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  startTime() async {
-    var _duration = new Duration(seconds: 2);
-    return new Timer(_duration, navigationPage);
+  Future<Timer> startTime() async {
+    // Time to wait
+    const _duration = Duration(seconds: 2);
+    return Timer(_duration, navigationPage);
   }
 
   void navigationPage() {

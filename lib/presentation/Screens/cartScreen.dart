@@ -8,7 +8,7 @@ import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 
 // This Screen is to show the cart of open/closed orders
 class CartScreen extends StatefulWidget {
-  CartScreen({Key key}) : super(key: key);
+  const CartScreen({Key key}) : super(key: key);
 
   @override
   _CartScreenState createState() => _CartScreenState();
@@ -37,7 +37,7 @@ class _CartScreenState extends State<CartScreen> {
             ),
             Positioned(
               top: 135,
-              child: buildUsersListView(),
+              child: buildCartOrdersListView(),
             ),
             Positioned(
               top: 100,
@@ -71,13 +71,13 @@ class _CartScreenState extends State<CartScreen> {
   }
 
 // this Method to build cards of cart orders
-  Container buildUsersListView() {
+  Container buildCartOrdersListView() {
     return Container(
       width: SizeConfig.screenWidth,
       height: SizeConfig.screenHeight - 100,
       child: ListView.builder(
         itemCount: 2,
-        itemBuilder: (_, index) => CartOrdersCard(),
+        itemBuilder: (_, index) => const CartOrdersCard(),
       ),
     );
   }

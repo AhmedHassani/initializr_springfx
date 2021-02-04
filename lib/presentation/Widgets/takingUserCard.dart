@@ -1,7 +1,5 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 
@@ -47,7 +45,7 @@ class TakingUserCard extends StatelessWidget {
                         fontSize: 16.0,
                         isPrimary: false,
                       ),
-                      Icon(
+                      const Icon(
                         Icons.arrow_forward,
                         color: mainGreenColor,
                         size: 24,
@@ -67,12 +65,12 @@ class TakingUserCard extends StatelessWidget {
 
   Widget buildContainer(bool isPaid) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 15),
+      padding: const EdgeInsets.only(bottom: 15),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromRGBO(214, 214, 214, 0.25),
               spreadRadius: 5,
@@ -97,7 +95,7 @@ class TakingUserCard extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: isPaid
                           ? secondGreenColor
-                          : Color.fromRGBO(255, 215, 215, 1),
+                          : const Color.fromRGBO(255, 215, 215, 1),
                       borderRadius: BorderRadius.circular(14.5),
                     ),
                     child: Padding(
@@ -121,7 +119,7 @@ class TakingUserCard extends StatelessWidget {
                 textColor: textColorSecondary,
                 fontSize: 16.0,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               text(

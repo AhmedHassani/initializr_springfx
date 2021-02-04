@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:giesse_app/gen/assets.gen.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
-import 'package:giesse_app/presentation/utils/colors.dart';
 
 class FolderCard extends StatelessWidget {
   const FolderCard({
@@ -17,7 +16,7 @@ class FolderCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Color.fromRGBO(214, 214, 214, 0.25),
             spreadRadius: 5,

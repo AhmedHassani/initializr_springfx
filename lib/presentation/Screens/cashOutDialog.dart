@@ -20,17 +20,17 @@ class CashOutDialog extends StatelessWidget {
   }
 }
 
-dialogContent(BuildContext context) {
+Container dialogContent(BuildContext context) {
   return Container(
-      decoration: new BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.white,
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.circular(16),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black26,
             blurRadius: 10.0,
-            offset: const Offset(0.0, 10.0),
+            offset: Offset(0.0, 10.0),
           ),
         ],
       ),
@@ -49,12 +49,13 @@ dialogContent(BuildContext context) {
                       Navigator.pop(context);
                     },
                     child: Container(
-                        padding: EdgeInsets.all(15),
-                        alignment: Alignment.centerLeft,
-                        child: Icon(
-                          Icons.close,
-                          color: Colors.black,
-                        )),
+                      padding: const EdgeInsets.all(15),
+                      alignment: Alignment.centerLeft,
+                      child: const Icon(
+                        Icons.close,
+                        color: Colors.black,
+                      ),
+                    ),
                   ),
                   Center(
                     child: Padding(

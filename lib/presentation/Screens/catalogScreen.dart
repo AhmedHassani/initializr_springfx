@@ -8,7 +8,7 @@ import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 
 // This screen to show the pictrues catalog
 class CatalogScreen extends StatefulWidget {
-  CatalogScreen({Key key}) : super(key: key);
+  const CatalogScreen({Key key}) : super(key: key);
 
   @override
   _CatalogScreenState createState() => _CatalogScreenState();
@@ -32,7 +32,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
               top: 100,
               child: Padding(
                 padding: const EdgeInsets.only(right: 20, left: 20, bottom: 13),
-                child: buildUsersGridView(),
+                child: buildFoldersGridView(),
               ),
             ),
             buildFloatingSearchBar(
@@ -46,18 +46,18 @@ class _CatalogScreenState extends State<CatalogScreen> {
     );
   }
 
-  Container buildUsersGridView() {
+  Container buildFoldersGridView() {
     return Container(
       width: SizeConfig.screenWidth - 40,
       height: SizeConfig.screenHeight - 100,
       child: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 13,
             mainAxisSpacing: 13,
             childAspectRatio: 162 / 186),
         itemCount: 4,
-        itemBuilder: (_, index) => FolderCard(),
+        itemBuilder: (_, index) => const FolderCard(),
       ),
     );
   }

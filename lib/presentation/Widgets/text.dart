@@ -15,16 +15,18 @@ Widget text(
   var isLongText = false,
   Color textColor,
 }) {
-  return Text(textAllCaps ? text.toUpperCase() : text,
-      textAlign: isCentered ? TextAlign.center : TextAlign.start,
-      maxLines: isLongText ? null : maxLine,
-      style: TextStyle(
-        fontFamily: 'Lato',
-        fontSize: fontSize,
-        color: isPrimary ? textColorPrimary : textColor,
-        fontWeight: isBold ? FontWeight.w900 : FontWeight.normal,
-        fontStyle: FontStyle.normal,
-        height: 1.5,
-        letterSpacing: latterSpacing,
-      ));
+  return Text(
+    textAllCaps ? text.toUpperCase() : text,
+    textAlign: isCentered ? TextAlign.center : TextAlign.start,
+    maxLines: isLongText ? null : maxLine,
+    style: TextStyle(
+      fontFamily: 'Lato',
+      fontSize: fontSize,
+      color: isPrimary ? textColorPrimary : textColor,
+      fontWeight: isBold ? FontWeight.w900 : FontWeight.normal,
+      fontStyle: FontStyle.normal,
+      height: 1.5,
+      letterSpacing: latterSpacing,
+    ),
+  );
 }

@@ -1,12 +1,10 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
-import 'package:giesse_app/gen/assets.gen.dart';
-import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
-import 'package:giesse_app/presentation/utils/responsiveUI.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
+// TODO To be told what to do in this screen
 class SupplierDetailsScreen extends StatefulWidget {
   const SupplierDetailsScreen({Key key}) : super(key: key);
 
@@ -20,9 +18,9 @@ class _SupplierDetailsScreenState extends State<SupplierDetailsScreen>
   int _selectedIndex = 0;
 
   List<Widget> list = [
-    Tab(text: 'Menu 1'),
-    Tab(text: 'Menu 2'),
-    Tab(text: 'Menu 3'),
+    const Tab(text: 'Menu 1'),
+    const Tab(text: 'Menu 2'),
+    const Tab(text: 'Menu 3'),
   ];
 
   @override
@@ -36,7 +34,7 @@ class _SupplierDetailsScreenState extends State<SupplierDetailsScreen>
       setState(() {
         _selectedIndex = _controller.index;
       });
-      print("Selected Index: " + _controller.index.toString());
+      print("Selected Index: ${_controller.index}");
     });
   }
 
@@ -45,11 +43,11 @@ class _SupplierDetailsScreenState extends State<SupplierDetailsScreen>
     return Scaffold(
       drawer: NavigationDrawer(),
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         bottom: TabBar(
           // automaticIndicatorColorAdjustment: true,
           indicatorSize: TabBarIndicatorSize.label,
-          labelColor: Color.fromRGBO(94, 136, 254, 1),
+          labelColor: const Color.fromRGBO(94, 136, 254, 1),
           unselectedLabelColor: Colors.grey,
           isScrollable: true,
           onTap: (index) {
@@ -76,17 +74,17 @@ class _SupplierDetailsScreenState extends State<SupplierDetailsScreen>
           Center(
               child: Text(
             _selectedIndex.toString(),
-            style: TextStyle(fontSize: 40),
+            style: const TextStyle(fontSize: 40),
           )),
           Center(
               child: Text(
             _selectedIndex.toString(),
-            style: TextStyle(fontSize: 40),
+            style: const TextStyle(fontSize: 40),
           )),
           Center(
               child: Text(
             _selectedIndex.toString(),
-            style: TextStyle(fontSize: 40),
+            style: const TextStyle(fontSize: 40),
           )),
         ],
       ),
