@@ -1,5 +1,7 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
+import 'package:giesse_app/presentation/Screens/agentDetailsScreen.dart';
+import 'package:giesse_app/presentation/Screens/agentsScreen.dart';
 import 'package:giesse_app/presentation/Screens/cartScreen.dart';
 import 'package:giesse_app/presentation/Screens/catalogScreen.dart';
 import 'package:giesse_app/presentation/Screens/customersScreen.dart';
@@ -85,6 +87,14 @@ class AppRouter {
       case '/SuppliersScreen':
         return MaterialPageRoute(
           builder: (_) => const SuppliersScreen(),
+        );
+      case '/AgentsScreen':
+        return MaterialPageRoute(
+          builder: (_) => const AgentsScreen(),
+        );
+      case '/AgentDetailsScreen':
+        return MaterialPageRoute(
+          builder: (_) => const AgentDetailsScreen(),
         );
       default:
         return null;

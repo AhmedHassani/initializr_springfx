@@ -45,10 +45,6 @@ class NavigationDrawerState extends State<NavigationDrawer> {
         name: "Suppliers",
         iconPath: Assets.icons.menu.suppliers.path,
         navigate: '/SuppliersScreen'),
-    DrawerItem(
-        name: "Agent Statistics",
-        iconPath: Assets.icons.menu.agentsStatistics.path,
-        navigate: '/CustomersScreen'),
   ];
   final drawerItemsCategory2 = [
     DrawerItem(

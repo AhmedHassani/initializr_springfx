@@ -1,27 +1,29 @@
 // @dart=2.9
 import 'package:flutter/material.dart';
+import 'package:giesse_app/gen/assets.gen.dart';
+import 'package:giesse_app/presentation/Widgets/floatingButton.dart';
 import 'package:giesse_app/presentation/Screens/drawerScreen.dart';
 import 'package:giesse_app/presentation/utils/colors.dart';
 import 'package:giesse_app/presentation/Widgets/text.dart';
 
-// TODO To be told what to do in this screen
-class SupplierDetailsScreen extends StatefulWidget {
-  const SupplierDetailsScreen({Key key}) : super(key: key);
+// Show all details of a user
+class AgentDetailsScreen extends StatefulWidget {
+  const AgentDetailsScreen({Key key}) : super(key: key);
 
   @override
-  _SupplierDetailsScreenState createState() => _SupplierDetailsScreenState();
+  _AgentDetailsScreenState createState() => _AgentDetailsScreenState();
 }
 
-class _SupplierDetailsScreenState extends State<SupplierDetailsScreen>
+class _AgentDetailsScreenState extends State<AgentDetailsScreen>
     with SingleTickerProviderStateMixin {
   TabController _controller;
   int _selectedIndex = 0;
 
   List<Widget> list = [
-    const Tab(text: 'General'),
-    const Tab(text: 'Info'),
-    const Tab(text: 'Notes'),
-    const Tab(text: 'Contacts'),
+    const Tab(text: 'Invoiced Order'),
+    const Tab(text: 'Documents'),
+    const Tab(text: 'Due Dates'),
+    const Tab(text: 'Qty. Sold'),
   ];
 
   @override
@@ -41,10 +43,13 @@ class _SupplierDetailsScreenState extends State<SupplierDetailsScreen>
 
   @override
   Widget build(BuildContext context) {
+    Function onPressed =
+        () => Navigator.of(context).pushNamed('/InsertOrderScreen');
     return Scaffold(
       drawer: NavigationDrawer(),
+      floatingActionButton: buildFloatingButton(
+          context, Assets.icons.sharedIcons.addToCart.path, 'Order', onPressed),
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.black),
         bottom: TabBar(
           // automaticIndicatorColorAdjustment: true,
           indicatorSize: TabBarIndicatorSize.label,
@@ -63,7 +68,7 @@ class _SupplierDetailsScreenState extends State<SupplierDetailsScreen>
         toolbarHeight: 98,
         centerTitle: true,
         title: text(
-          'Supplier Name',
+          'Agent Name',
           fontSize: 18.0,
           isPrimary: false,
           textColor: textColorSecondary,
