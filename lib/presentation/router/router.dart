@@ -19,6 +19,8 @@ import 'package:giesse_app/presentation/Screens/takingInfoScreen.dart';
 import 'package:giesse_app/presentation/Screens/takingScreen.dart';
 import 'package:giesse_app/presentation/Screens/userScreen.dart';
 
+import '../Screens/giesseManagerBrowser.dart';
+
 // Navigator.of(context).pushReplacementNamed('/DownloadingDataScreen'),
 // This file to make routes for screens
 class AppRouter {
@@ -96,6 +98,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const AgentDetailsScreen(),
         );
+      case '/BrowserWidget':
+        return MaterialPageRoute(
+          builder: (_) => BrowserWidget(),
+        );
+
       default:
         return null;
     }

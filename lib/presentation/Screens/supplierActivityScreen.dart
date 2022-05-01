@@ -101,7 +101,7 @@ class _SupplierActivityScreenState extends State<SupplierActivityScreen>
             physics: const BouncingScrollPhysics(),
             axisAlignment: SizeConfig.isPortrait ? 0.0 : -1.0,
             openAxisAlignment: 0.0,
-            maxWidth: SizeConfig.isPortrait ? 600 : 500,
+
             debounceDelay: const Duration(milliseconds: 100),
             onQueryChanged: (query) {
               // Call your model, bloc, controller here.

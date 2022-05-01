@@ -1,4 +1,5 @@
 // @dart=2.9
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:giesse_app/presentation/Widgets/agentsCard.dart';
 import 'package:giesse_app/presentation/Widgets/searchBar.dart';
@@ -17,6 +18,7 @@ class AgentsScreen extends StatefulWidget {
 }
 
 class _AgentsScreenState extends State<AgentsScreen> {
+  @override
   @override
   Widget build(BuildContext context) {
     return Scaffold(

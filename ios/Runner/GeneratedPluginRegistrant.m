@@ -6,22 +6,16 @@
 
 #import "GeneratedPluginRegistrant.h"
 
-#if __has_include(<flutter_statusbarcolor/FlutterStatusbarcolorPlugin.h>)
-#import <flutter_statusbarcolor/FlutterStatusbarcolorPlugin.h>
+#if __has_include(<flutter_inappwebview/InAppWebViewFlutterPlugin.h>)
+#import <flutter_inappwebview/InAppWebViewFlutterPlugin.h>
 #else
-@import flutter_statusbarcolor;
+@import flutter_inappwebview;
 #endif
 
-#if __has_include(<material_search_bar/MaterialSearchBarPlugin.h>)
-#import <material_search_bar/MaterialSearchBarPlugin.h>
+#if __has_include(<path_provider_ios/FLTPathProviderPlugin.h>)
+#import <path_provider_ios/FLTPathProviderPlugin.h>
 #else
-@import material_search_bar;
-#endif
-
-#if __has_include(<path_provider/FLTPathProviderPlugin.h>)
-#import <path_provider/FLTPathProviderPlugin.h>
-#else
-@import path_provider;
+@import path_provider_ios;
 #endif
 
 #if __has_include(<sqflite/SqflitePlugin.h>)
@@ -33,8 +27,7 @@
 @implementation GeneratedPluginRegistrant
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
-  [FlutterStatusbarcolorPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterStatusbarcolorPlugin"]];
-  [MaterialSearchBarPlugin registerWithRegistrar:[registry registrarForPlugin:@"MaterialSearchBarPlugin"]];
+  [InAppWebViewFlutterPlugin registerWithRegistrar:[registry registrarForPlugin:@"InAppWebViewFlutterPlugin"]];
   [FLTPathProviderPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPathProviderPlugin"]];
   [SqflitePlugin registerWithRegistrar:[registry registrarForPlugin:@"SqflitePlugin"]];
 }

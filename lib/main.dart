@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:giesse_app/presentation/Screens/agentsScreen.dart';
 import 'package:giesse_app/presentation/Screens/editOrderScreen.dart';
+import 'package:giesse_app/presentation/Screens/giesseManagerBrowser.dart';
 import 'package:giesse_app/presentation/Screens/insertOrderScreen.dart';
 import 'package:giesse_app/presentation/Screens/orderHistoryScreen.dart';
 import 'package:giesse_app/presentation/Screens/orderViewScreen.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(
                 primarySwatch: Colors.blue,
               ),
-              home: const AgentsScreen(),
+              home: AgentsScreen(),
             );
           },
         );

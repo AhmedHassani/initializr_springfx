@@ -47,14 +47,18 @@ class NavigationDrawerState extends State<NavigationDrawer> {
         navigate: '/SuppliersScreen'),
   ];
   final drawerItemsCategory2 = [
+    // DrawerItem(
+    //     name: "Catalogue",
+    //     iconPath: Assets.icons.menu.catalog.path,
+    //     navigate: '/CatalogScreen'),
+    // DrawerItem(
+    //     name: "Remote Files",
+    //     iconPath: Assets.icons.menu.remoteFiles.path,
+    //     navigate: '/CatalogScreen'),
     DrawerItem(
-        name: "Catalogue",
-        iconPath: Assets.icons.menu.catalog.path,
-        navigate: '/CatalogScreen'),
-    DrawerItem(
-        name: "Remote Files",
-        iconPath: Assets.icons.menu.remoteFiles.path,
-        navigate: '/CatalogScreen'),
+        name: "Giesse Maneger",
+        iconPath: Assets.icons.menu.crm.path,
+        navigate: '/BrowserWidget'),
     DrawerItem(
         name: "CRM",
         iconPath: Assets.icons.menu.crm.path,

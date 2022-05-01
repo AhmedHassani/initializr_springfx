@@ -16,10 +16,7 @@ class DownloadProgressIndicator extends StatelessWidget {
               pathColor: const Color.fromRGBO(239, 252, 234, 100),
               size: const Size(238, 238),
               value: 7.5 / 10 * 100, //1~100
-              valueColor: ColorTween(
-                begin: const Color.fromRGBO(67, 202, 91, 100),
-                end: const Color.fromRGBO(67, 202, 91, 100),
-              ).transform(1 / 10),
+              valueColor: Colors.green.shade400,
               pathStrokeWidth: 10,
               valueStrokeWidth: 10,
 
